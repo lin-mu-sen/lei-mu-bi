@@ -9,6 +9,13 @@ src/litecoin-gui
 src/litecoin-node
 src/litecoin-tx
 src/litecoin-wallet
+src/woodcoin
+src/woodcoind
+src/woodcoin-cli
+src/woodcoin-gui
+src/woodcoin-node
+src/woodcoin-tx
+src/woodcoin-wallet
 src/test/fuzz/*
 !src/test/fuzz/*.*
 src/test/test_litecoin
@@ -95,7 +102,9 @@ src/qt/bitcoin-qt.includes
 Makefile
 !depends/Makefile
 src/qt/litecoin-qt
+src/qt/woodcoin-qt
 Litecoin-Qt.app
+Woodcoin-Qt.app
 background.tiff*
 
 # Qt Creator
