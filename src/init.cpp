@@ -306,7 +306,7 @@ void Shutdown(NodeContext& node)
     UnregisterAllValidationInterfaces();
     GetMainSignals().UnregisterBackgroundSignalScheduler();
     globalVerifyHandle.reset();
-    ECC_Stop();
+    //ECC_Stop();
     node.mempool.reset();
     node.chainman = nullptr;
     node.scheduler.reset();
@@ -1229,11 +1229,11 @@ bool AppInitSanityChecks()
     // ********************************************************* Step 4: sanity checks
 
     // Initialize elliptic curve code
-    std::string sha256_algo = SHA256AutoDetect();
-    LogPrintf("Using the '%s' SHA256 implementation\n", sha256_algo);
-    RandomInit();
-    ECC_Start();
-    globalVerifyHandle.reset(new ECCVerifyHandle());
+    //std::string sha256_algo = SHA256AutoDetect();
+    //LogPrintf("Using the '%s' SHA256 implementation\n", sha256_algo);
+    //RandomInit();
+    //ECC_Start();
+    //globalVerifyHandle.reset(new ECCVerifyHandle());
 
     // Sanity check
     if (!InitSanityCheck())

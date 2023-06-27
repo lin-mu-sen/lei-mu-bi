@@ -97,9 +97,9 @@ static int AppInitRawTx(int argc, char* argv[])
 
     if (argc < 2 || HelpRequested(gArgs)) {
         // First part of help message is specific to this utility
-        std::string strUsage = PACKAGE_NAME " litecoin-tx utility version " + FormatFullVersion() + "\n\n" +
-            "Usage:  litecoin-tx [options] <hex-tx> [commands]  Update hex-encoded litecoin transaction\n" +
-            "or:     litecoin-tx [options] -create [commands]   Create hex-encoded litecoin transaction\n" +
+        std::string strUsage = PACKAGE_NAME " woodcoin-tx utility version " + FormatFullVersion() + "\n\n" +
+            "Usage:  woodcoin-tx [options] <hex-tx> [commands]  Update hex-encoded woodcoin transaction\n" +
+            "or:     woodcoin-tx [options] -create [commands]   Create hex-encoded woodcoin transaction\n" +
             "\n";
         strUsage += gArgs.GetHelpMessage();
 
@@ -661,10 +661,10 @@ class Secp256k1Init
 
 public:
     Secp256k1Init() {
-        ECC_Start();
+        //ECC_Start();
     }
     ~Secp256k1Init() {
-        ECC_Stop();
+        //ECC_Stop();
     }
 };
 

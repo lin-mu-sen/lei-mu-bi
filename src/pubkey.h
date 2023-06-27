@@ -1,6 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2019 The Bitcoin Core developers
-// Copyright (c) 2017 The Zcash developers
+// Copyright (c) 2009-2015 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -31,20 +30,10 @@ typedef uint256 ChainCode;
 class CPubKey
 {
 public:
-    /**
-     * secp256k1:
-     */
-    static constexpr unsigned int SIZE                   = 65;
+    static constexpr unsigned int SIZE = 65;
     static constexpr unsigned int COMPRESSED_SIZE        = 33;
     static constexpr unsigned int SIGNATURE_SIZE         = 72;
     static constexpr unsigned int COMPACT_SIGNATURE_SIZE = 65;
-    /**
-     * see www.keylength.com
-     * script supports up to 75 for single byte push
-     */
-    static_assert(
-        SIZE >= COMPRESSED_SIZE,
-        "COMPRESSED_SIZE is larger than SIZE");
 
 private:
 
@@ -52,15 +41,15 @@ private:
      * Just store the serialized data.
      * Its length can very cheaply be computed from the first byte.
      */
-    unsigned char vch[SIZE];
+    unsigned char vch[65];
 
     //! Compute the length of a pubkey with a given first byte.
     unsigned int static GetLen(unsigned char chHeader)
     {
         if (chHeader == 2 || chHeader == 3)
-            return COMPRESSED_SIZE;
+            return 33;
         if (chHeader == 4 || chHeader == 6 || chHeader == 7)
-            return SIZE;
+            return 65;
         return 0;
     }
 
@@ -101,9 +90,9 @@ public:
     }
 
     //! Construct a public key from a byte vector.
-    explicit CPubKey(const std::vector<unsigned char>& _vch)
+    CPubKey(const std::vector<unsigned char>& vch)
     {
-        Set(_vch.begin(), _vch.end());
+        Set(vch.begin(), vch.end());
     }
 
     //! Simple read-only vector-like interface to the pubkey data.
@@ -130,13 +119,27 @@ public:
     }
 
     //! Implement serialization, as if this was a byte vector.
+    unsigned int GetSerializeSize(int nType, int nVersion) const
+    {
+        return size() + 1;
+    }
     template <typename Stream>
+    void Serialize(Stream& s, int nType, int nVersion) const
+    {
+        unsigned int len = size();
+        ::WriteCompactSize(s, len);
+        s.write((char*)vch, len);
+    }    //! Implement serialization, as if this was a byte vector.
+   
+
+ template <typename Stream>
     void Serialize(Stream& s) const
     {
         unsigned int len = size();
         ::WriteCompactSize(s, len);
         s.write((char*)vch, len);
     }
+
     template <typename Stream>
     void Unserialize(Stream& s)
     {
@@ -146,6 +149,21 @@ public:
             if (len != size()) {
                 Invalidate();
             }
+        } else {
+            // invalid pubkey, skip available data
+            char dummy;
+            while (len--)
+                s.read(&dummy, 1);
+            Invalidate();
+        }
+    }	
+
+    template <typename Stream>
+    void Unserialize(Stream& s, int nType, int nVersion)
+    {
+        unsigned int len = ::ReadCompactSize(s);
+        if (len <= 65) {
+            s.read((char*)vch, len);
         } else {
             // invalid pubkey, skip available data
             char dummy;
@@ -169,8 +187,8 @@ public:
 
     /*
      * Check syntactic correctness.
-     *
-     * Note that this is consensus critical as CheckECDSASignature() calls it!
+     * 
+     * Note that this is consensus critical as CheckSig() calls it!
      */
     bool IsValid() const
     {
@@ -183,7 +201,7 @@ public:
     //! Check whether this is a compressed public key.
     bool IsCompressed() const
     {
-        return size() == COMPRESSED_SIZE;
+        return size() == 33;
     }
 
     /**
@@ -205,6 +223,7 @@ public:
 
     //! Derive BIP32 child pubkey.
     bool Derive(CPubKey& pubkeyChild, ChainCode &ccChild, unsigned int nChild, const ChainCode& cc) const;
+    bool Derive(CPubKey& pubkeyChild, unsigned char ccChild[32], unsigned int nChild, const unsigned char cc[32]) const;
 };
 
 class XOnlyPubKey
@@ -227,7 +246,7 @@ public:
     const unsigned char* data() const { return m_keydata.begin(); }
     size_t size() const { return m_keydata.size(); }
 };
-
+/*
 struct CExtPubKey {
     unsigned char nDepth;
     unsigned char vchFingerprint[4];
@@ -237,11 +256,8 @@ struct CExtPubKey {
 
     friend bool operator==(const CExtPubKey &a, const CExtPubKey &b)
     {
-        return a.nDepth == b.nDepth &&
-            memcmp(&a.vchFingerprint[0], &b.vchFingerprint[0], sizeof(vchFingerprint)) == 0 &&
-            a.nChild == b.nChild &&
-            a.chaincode == b.chaincode &&
-            a.pubkey == b.pubkey;
+        return a.nDepth == b.nDepth && memcmp(&a.vchFingerprint[0], &b.vchFingerprint[0], 4) == 0 && a.nChild == b.nChild &&
+               a.chaincode == b.chaincode && a.pubkey == b.pubkey;
     }
 
     friend bool operator!=(const CExtPubKey &a, const CExtPubKey &b)
@@ -249,10 +265,36 @@ struct CExtPubKey {
         return !(a == b);
     }
 
+
     void Encode(unsigned char code[BIP32_EXTKEY_SIZE]) const;
     void Decode(const unsigned char code[BIP32_EXTKEY_SIZE]);
     bool Derive(CExtPubKey& out, unsigned int nChild) const;
+
+    unsigned int GetSerializeSize(int nType, int nVersion) const
+    {
+        return BIP32_EXTKEY_SIZE+1; //add one byte for the size (compact int)
+    }
+    template <typename Stream>
+    void Serialize(Stream& s, int nType, int nVersion) const
+    {
+        unsigned int len = BIP32_EXTKEY_SIZE;
+        ::WriteCompactSize(s, len);
+        unsigned char code[BIP32_EXTKEY_SIZE];
+        Encode(code);
+        s.write((const char *)&code[0], len);
+    }
+    template <typename Stream>
+    void Unserialize(Stream& s, int nType, int nVersion)
+    {
+        unsigned int len = ::ReadCompactSize(s);
+        unsigned char code[BIP32_EXTKEY_SIZE];
+        if (len != BIP32_EXTKEY_SIZE)
+            throw std::runtime_error("Invalid extended key size\n");
+        s.read((char *)&code[0], len);
+        Decode(code);
+    }
 };
+*/
 
 /** Users of this module must hold an ECCVerifyHandle. The constructor and
  *  destructor of these are not allowed to run in parallel, though. */
