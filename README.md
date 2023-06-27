@@ -1,26 +1,30 @@
-Litecoin Core integration/staging tree
+类木比
+
+"Lite" Wood Coin Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/litecoin-project/litecoin.svg?branch=master)](https://travis-ci.org/litecoin-project/litecoin)
+https://woodcoin.info
 
-https://litecoin.org
-
-What is Litecoin?
+What is Woodcoin?
 ----------------
 
-Litecoin is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. Litecoin uses peer-to-peer technology to operate
+Woodcoin is an experimental digital currency that enables instant payments to
+anyone, anywhere in the world. Woodcoin uses peer-to-peer technology to operate
 with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Litecoin Core is the name of open source
-software which enables the use of this currency.
+out collectively by the network.  Woodcoin is intended as an extremely long-
+lasting support and component of the proof-of-work public currency ecosystem
+including LItecoin and Bitcoin.
+ 
 
-For more information, as well as an immediately useable, binary version of
-the Litecoin Core software, see [https://litecoin.org](https://litecoin.org).
+What is Lei-Mu-Bi (类木比)?
+----------------
+Lei-mu-bi is an attempt to utilize the latest litecoin-core software to create a 
+full node that also operates on the woodcoin network.  
 
 License
 -------
 
-Litecoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Lei-Mu-Bi Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Development Process
@@ -37,12 +41,6 @@ that repository unless it is for development reasons.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md)
 and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).
-
-The developer [mailing list](https://groups.google.com/forum/#!forum/litecoin-dev)
-should be used to discuss complicated or controversial changes before working
-on a patch set.
-
-Developer IRC can be found on Freenode at #litecoin-dev.
 
 Testing
 -------
