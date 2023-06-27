@@ -273,7 +273,7 @@ class BIP32PubkeyProvider final : public PubkeyProvider
         ret.nDepth = m_root_extkey.nDepth;
         std::copy(m_root_extkey.vchFingerprint, m_root_extkey.vchFingerprint + sizeof(ret.vchFingerprint), ret.vchFingerprint);
         ret.nChild = m_root_extkey.nChild;
-        ret.chaincode = m_root_extkey.chaincode;
+        memcpy(&ret.vchChainCode[0], &m_root_extkey.vchChainCode[0], 32);
         ret.key = key;
         return true;
     }

@@ -251,7 +251,7 @@ bool CKey::Derive(CKey& keyChild, unsigned char ccChild[32], unsigned int nChild
     assert(IsValid());
     assert(IsCompressed());
     unsigned char out[64];
-    //LockObject(out);
+    LockObject(out);
     if ((nChild >> 31) == 0) {
         CPubKey pubkey = GetPubKey();
         assert(pubkey.begin() + 33 == pubkey.end());
@@ -262,7 +262,7 @@ bool CKey::Derive(CKey& keyChild, unsigned char ccChild[32], unsigned int nChild
     }
     memcpy(ccChild, out+32, 32);
     bool ret = CECKey::TweakSecret((unsigned char*)keyChild.begin(), begin(), out);
-    //UnlockObject(out);
+    UnlockObject(out);
     keyChild.fCompressed = true;
     keyChild.fValid = ret;
     return ret;
@@ -296,11 +296,11 @@ bool CExtKey::Derive(CExtKey &out, unsigned int nChild) const {
 void CExtKey::SetSeed(const unsigned char *seed, unsigned int nSeedLen) {
     static const unsigned char hashkey[] = {'B','i','t','c','o','i','n',' ','s','e','e','d'};
     unsigned char out[64];
-    //LockObject(out);
+    LockObject(out);
     CHMAC_SHA512(hashkey, sizeof(hashkey)).Write(seed, nSeedLen).Finalize(out);
     key.Set(&out[0], &out[32], true);
     memcpy(vchChainCode, &out[32], 32);
-    //UnlockObject(out);
+    UnlockObject(out);
     nDepth = 0;
     nChild = 0;
     memset(vchFingerprint, 0, sizeof(vchFingerprint));
