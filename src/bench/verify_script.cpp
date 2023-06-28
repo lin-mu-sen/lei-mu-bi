@@ -19,7 +19,7 @@
 static void VerifyScriptBench(benchmark::Bench& bench)
 {
     const ECCVerifyHandle verify_handle;
-    ECC_Start();
+//    ECC_Start();
 
     const int flags = SCRIPT_VERIFY_WITNESS | SCRIPT_VERIFY_P2SH;
     const int witnessversion = 0;
@@ -72,7 +72,7 @@ static void VerifyScriptBench(benchmark::Bench& bench)
         assert(csuccess == 1);
 #endif
     });
-    ECC_Stop();
+  //  ECC_Stop();
 }
 
 static void VerifyNestedIfScript(benchmark::Bench& bench)

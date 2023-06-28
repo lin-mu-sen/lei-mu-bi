@@ -361,6 +361,38 @@ bool CExtPubKey::Derive(CExtPubKey &out, unsigned int nChild) const {
     return pubkey.Derive(out.pubkey, out.vchChainCode, nChild, vchChainCode);
 }
 
+
 bool ECC_InitSanityCheck() {
     return CECKey::SanityCheck();
 }
+
+
+
+
+/*
+void ECC_Start() {
+    assert(secp256k1_context_sign == nullptr);
+
+    secp256k1_context *ctx = secp256k1_context_create(SECP256K1_CONTEXT_SIGN);
+    assert(ctx != nullptr);
+
+    {
+        // Pass in a random blinding seed to the secp256k1 context.
+        std::vector<unsigned char, secure_allocator<unsigned char>> vseed(32);
+        GetRandBytes(vseed.data(), 32);
+        bool ret = secp256k1_context_randomize(ctx, vseed.data());
+        assert(ret);
+    }
+
+    secp256k1_context_sign = ctx;
+}
+
+void ECC_Stop() {
+    secp256k1_context *ctx = secp256k1_context_sign;
+    secp256k1_context_sign = nullptr;
+
+    if (ctx) {
+        secp256k1_context_destroy(ctx);
+    }
+}
+*/

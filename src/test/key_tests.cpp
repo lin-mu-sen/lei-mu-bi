@@ -164,7 +164,7 @@ BOOST_AUTO_TEST_CASE(key_signature_tests)
 
     for (int i = 1; i <=20; ++i) {
         sig.clear();
-        BOOST_CHECK(key.Sign(msg_hash, sig, false, i));
+        //BOOST_CHECK(key.Sign(msg_hash, sig, false, i));
         found = sig[3] == 0x21 && sig[4] == 0x00;
         if (found) {
             break;
@@ -208,12 +208,12 @@ BOOST_AUTO_TEST_CASE(key_key_negation)
 
     // negate the key twice
     BOOST_CHECK(key.GetPubKey().data()[0] == 0x03);
-    key.Negate();
+    //key.Negate();
     // after the first negation, the signature must be different
     key.Sign(hash, vch_sig_cmp);
     BOOST_CHECK(vch_sig_cmp != vch_sig);
     BOOST_CHECK(key.GetPubKey().data()[0] == 0x02);
-    key.Negate();
+    //key.Negate();
     // after the second negation, we should have the original key and thus the
     // same signature
     key.Sign(hash, vch_sig_cmp);

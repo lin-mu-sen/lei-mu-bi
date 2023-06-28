@@ -28,7 +28,7 @@ static void CCheckQueueSpeedPrevectorJob(benchmark::Bench& bench)
     if (GetNumCores() <= 1) return;
 
     const ECCVerifyHandle verify_handle;
-    ECC_Start();
+//    ECC_Start();
 
     struct PrevectorJob {
         prevector<PREVECTOR_SIZE, uint8_t> p;
@@ -72,6 +72,6 @@ static void CCheckQueueSpeedPrevectorJob(benchmark::Bench& bench)
     });
     tg.interrupt_all();
     tg.join_all();
-    ECC_Stop();
+  //  ECC_Stop();
 }
 BENCHMARK(CCheckQueueSpeedPrevectorJob);
