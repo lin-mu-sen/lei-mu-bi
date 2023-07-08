@@ -230,6 +230,7 @@ bool CECKey::Sign(const uint256 &hash, std::vector<unsigned char>& vchSig, bool 
 	ECDSA_SIG_get0(sig, &r, &s);
 
 	BIGNUM * s1;
+    s1 = BN_new();
 	BN_copy(s1,s);
 
     if (lowS && BN_cmp(s, halforder) > 0) {
@@ -305,6 +306,8 @@ bool CECKey::Recover(const uint256 &hash, const unsigned char *p64, int rec)
 	s = BN_new();
 	BIGNUM *r1;
 	BIGNUM *s1;
+    r1 = BN_new();
+    s1 = BN_new();
 	ECDSA_SIG_get0(sig, &r, &s);
 
     BN_bin2bn(&p64[0],  32, r1);

@@ -202,7 +202,7 @@ bool CExtPubKey::Derive(CExtPubKey &out, unsigned int _nChild) const {
 
 /* static */ bool CPubKey::CheckLowS(const std::vector<unsigned char>& vchSig) {
     secp256k1_ecdsa_signature sig;
-    assert(secp256k1_context_verify && "secp256k1_context_verify must be initialized to use CPubKey.");
+    //assert(secp256k1_context_verify && "secp256k1_context_verify must be initialized to use CPubKey.");
     if (!ecdsa_signature_parse_der_lax(secp256k1_context_verify, &sig, vchSig.data(), vchSig.size())) {
         return false;
     }

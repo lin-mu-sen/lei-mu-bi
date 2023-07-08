@@ -1,0 +1,201 @@
+./libmw/test/tests/consensus/Test_StealthSumValidator.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/consensus/Test_Weight.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/consensus/Test_Aggregation.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/consensus/Test_KernelSumValidator.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/wallet/Test_Keychain.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/db/Test_LeafDB.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/models/block/Test_Header.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/models/block/Test_Block.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/models/tx/Test_PegInCoin.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/models/tx/Test_Output.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/models/tx/Test_TxBody.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/models/tx/Test_UTXO.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/models/tx/Test_PegOutCoin.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/models/tx/Test_Input.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/models/tx/Test_Transaction.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/models/tx/Test_Kernel.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/models/crypto/Test_BigInteger.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/mmr/Test_MMR.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/mmr/Test_PruneList.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/mmr/Test_LeafSet.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/mmr/Test_MMRUtil.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/mmr/Test_LeafSetCache.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/mmr/Test_LeafIndex.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/mmr/Test_Index.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/crypto/Test_RangeProofs.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/crypto/Test_Keys.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/crypto/Test_AggSig.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/crypto/Test_AddCommitments.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/node/Test_BlockValidator.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/node/Test_Reorg.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/node/Test_MineChain.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/test/tests/node/Test_BlockBuilder.cpp:// Copyright (c) 2021 The Litecoin Core developers
+./libmw/README.md:Modular library for supporting Litecoin's implementation of the MWEB (Mimblewimble Extension Block). 
+./libmw/README.md:and just replace the more-limited secp256k1 dependency that's already included in Litecoin.
+./libmw/include/mw/interfaces/db_interface.h:// Copyright (c) 2020 The Litecoin Developers
+Binary file ./libbitcoin_server.a matches
+Binary file ./woodcoin_tx-bitcoin-tx.o matches
+Binary file ./woodcoin_cli-bitcoin-cli.o matches
+./bitcoin-tx-res.rc:            VALUE "CompanyName",        "Litecoin"
+./bitcoin-tx-res.rc:            VALUE "FileDescription",    "litecoin-tx (CLI Litecoin transaction editor utility)"
+Binary file ./libbitcoin_wallet.a matches
+Binary file ./woodcoind matches
+./test/pow_tests.cpp:    /* Litecoin: we allow overflowing by 1 bit
+Binary file ./test/test_woodcoin matches
+Binary file ./test/test_woodcoin-addrman_tests.o matches
+./test/main.cpp:#define BOOST_TEST_MODULE Litecoin Core Test Suite
+Binary file ./test/test_woodcoin-main.o matches
+Binary file ./test/util/libtest_util_a-setup_common.o matches
+./test/data/README.md:This directory contains data-driven tests for various aspects of Litecoin.
+./test/README.md:unit testing framework, and since Litecoin Core already uses Boost, it makes
+Binary file ./test/test_woodcoin-net_tests.o matches
+Binary file ./test/test_litecoin matches
+Binary file ./libbitcoin_server_a-init.o matches
+./wallet/txlist.cpp:                // Received by Litecoin Address
+./wallet/txlist.cpp:            // Sent to Litecoin Address
+Binary file ./wallet/libbitcoin_wallet_tool_a-wallettool.o matches
+Binary file ./wallet/libbitcoin_wallet_a-rpcwallet.o matches
+Binary file ./wallet/libbitcoin_wallet_a-rpcdump.o matches
+Binary file ./wallet/libbitcoin_wallet_a-wallet.o matches
+./wallet/rpcdump.cpp:                    {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The Litecoin address (or hex-encoded script)"},
+./wallet/rpcdump.cpp:            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Litecoin address or script");
+./wallet/rpcdump.cpp:        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Litecoin address");
+./wallet/rpcdump.cpp:    file << strprintf("# Wallet dump created by Litecoin %s\n", CLIENT_BUILD);
+./wallet/rpcwallet.cpp:                "\nReturns a new Litecoin address for receiving payments.\n"
+./wallet/rpcwallet.cpp:                "\nReturns a new Litecoin address, for receiving change.\n"
+./wallet/rpcwallet.cpp:        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Litecoin address");
+./wallet/rpcwallet.cpp:            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Litecoin address: ") + address);
+./wallet/rpcwallet.cpp:            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Litecoin address");
+./wallet/rpcwallet.cpp:                "Each key is a Litecoin address or hex-encoded public key.\n"
+./wallet/rpcwallet.cpp:                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Litecoin address: ") + input.get_str());
+Binary file ./woodcoin-tx matches
+./compat/assumptions.h:# error "Litecoin cannot be compiled without assertions."
+Binary file ./libbitcoin_server_a-net.o matches
+Binary file ./rpc/libbitcoin_server_a-mining.o matches
+Binary file ./rpc/libbitcoin_server_a-server.o matches
+./rpc/rawtransaction.cpp:                "\nReturn a JSON object representing the serialized, base64-encoded partially signed Litecoin transaction.\n",
+./rpc/rawtransaction.cpp:                                        {RPCResult::Type::STR, "address"," Litecoin address if there is one"},
+./rpc/rawtransaction.cpp:                "\nCombine multiple partially signed Litecoin transactions into one transaction.\n"
+Binary file ./rpc/libbitcoin_common_a-rawtransaction_util.o matches
+Binary file ./rpc/libbitcoin_server_a-rawtransaction.o matches
+./rpc/rawtransaction_util.cpp:                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Litecoin address: ") + name_);
+Binary file ./libbitcoin_common.a matches
+./config/bitcoin-config.h:#define COPYRIGHT_HOLDERS_FINAL "The Litecoin Core developers"
+./config/bitcoin-config.h:#define COPYRIGHT_HOLDERS_SUBSTITUTION "Litecoin Core"
+./config/bitcoin-config.h:#define PACKAGE_NAME "Litecoin Core"
+./config/bitcoin-config.h:#define PACKAGE_STRING "Litecoin Core 0.21.2.2"
+Binary file ./libbitcoin_server_a-timedata.o matches
+./bitcoin-wallet-res.rc:            VALUE "CompanyName",        "Litecoin"
+./qt/res/bitcoin-qt-res.rc:            VALUE "CompanyName",        "Litecoin"
+./qt/res/bitcoin-qt-res.rc:            VALUE "FileDescription",    PACKAGE_NAME " (GUI node for Litecoin)"
+Binary file ./qt/libbitcoinqt_a-bitcoinunits.o matches
+Binary file ./qt/libbitcoinqt_a-addressbookpage.o matches
+./qt/addressbookpage.cpp:        ui->labelExplanation->setText(tr("These are your Litecoin addresses for sending payments. Always check the amount and the receiving address before sending coins."));
+./qt/addressbookpage.cpp:        ui->labelExplanation->setText(tr("These are your Litecoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.\nSigning is only possible with addresses of the type 'legacy'."));
+Binary file ./qt/libbitcoinqt_a-sendcoinsdialog.o matches
+Binary file ./qt/libbitcoinqt_a-rpcconsole.o matches
+./qt/bitcoinunits.cpp:    case BTC: return QString("Litecoins");
+Binary file ./qt/test/test_woodcoin_qt-test_main.o matches
+Binary file ./qt/test/test_woodcoin-qt matches
+./qt/test/wallettests.cpp:/* Litecoin: Disable RBF
+./qt/test/wallettests.cpp:    // Litecoin: Disable BumpFee tests
+Binary file ./qt/test/test_litecoin-qt matches
+./qt/test/test_main.cpp:    app.setApplicationName("Litecoin-Qt-test");
+./qt/forms/ui_signverifymessagedialog.h:        addressIn_SM->setToolTip(QApplication::translate("SignVerifyMessageDialog", "The Litecoin address to sign the message with", nullptr));
+./qt/forms/ui_signverifymessagedialog.h:        signMessageButton_SM->setToolTip(QApplication::translate("SignVerifyMessageDialog", "Sign the message to prove you own this Litecoin address", nullptr));
+./qt/forms/ui_signverifymessagedialog.h:        addressIn_VM->setToolTip(QApplication::translate("SignVerifyMessageDialog", "The Litecoin address the message was signed with", nullptr));
+./qt/forms/ui_signverifymessagedialog.h:        verifyMessageButton_VM->setToolTip(QApplication::translate("SignVerifyMessageDialog", "Verify the message to ensure it was signed with the specified Litecoin address", nullptr));
+./qt/forms/sendcoinsentry.ui:         <string>The Litecoin address to send the payment to</string>
+./qt/forms/sendcoinsentry.ui:       <string>A message that was attached to the litecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Litecoin network.</string>
+./qt/forms/ui_receivecoinsdialog.h:        label_3->setToolTip(QApplication::translate("ReceiveCoinsDialog", "An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Litecoin network.", nullptr));
+./qt/forms/ui_optionsdialog.h:        mapPortUpnp->setToolTip(QApplication::translate("OptionsDialog", "Automatically open the Litecoin client port on the router. This only works when your router supports UPnP and it is enabled.", nullptr));
+./qt/forms/ui_optionsdialog.h:        connectSocks->setToolTip(QApplication::translate("OptionsDialog", "Connect to the Litecoin network through a SOCKS5 proxy.", nullptr));
+./qt/forms/ui_optionsdialog.h:        connectSocksTor->setToolTip(QApplication::translate("OptionsDialog", "Connect to the Litecoin network through a separate SOCKS5 proxy for Tor onion services.", nullptr));
+./qt/forms/optionsdialog.ui:          <string>Automatically open the Litecoin client port on the router. This only works when your router supports UPnP and it is enabled.</string>
+./qt/forms/optionsdialog.ui:          <string>Connect to the Litecoin network through a SOCKS5 proxy.</string>
+./qt/forms/optionsdialog.ui:          <string>Connect to the Litecoin network through a separate SOCKS5 proxy for Tor onion services.</string>
+./qt/forms/ui_sendcoinsentry.h:        payTo->setToolTip(QApplication::translate("SendCoinsEntry", "The Litecoin address to send the payment to", nullptr));
+./qt/forms/ui_sendcoinsentry.h:        messageTextLabel->setToolTip(QApplication::translate("SendCoinsEntry", "A message that was attached to the litecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Litecoin network.", nullptr));
+./qt/forms/signverifymessagedialog.ui:            <string>The Litecoin address to sign the message with</string>
+./qt/forms/signverifymessagedialog.ui:            <string>Sign the message to prove you own this Litecoin address</string>
+./qt/forms/signverifymessagedialog.ui:            <string>The Litecoin address the message was signed with</string>
+./qt/forms/signverifymessagedialog.ui:            <string>Verify the message to ensure it was signed with the specified Litecoin address</string>
+./qt/forms/ui_overviewpage.h:        labelWalletStatus->setToolTip(QApplication::translate("OverviewPage", "The displayed information may be out of date. Your wallet automatically synchronizes with the Litecoin network after a connection is established, but this process has not completed yet.", nullptr));
+./qt/forms/ui_overviewpage.h:        labelTransactionsStatus->setToolTip(QApplication::translate("OverviewPage", "The displayed information may be out of date. Your wallet automatically synchronizes with the Litecoin network after a connection is established, but this process has not completed yet.", nullptr));
+./qt/forms/receivecoinsdialog.ui:           <string>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Litecoin network.</string>
+./qt/forms/overviewpage.ui:               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Litecoin network after a connection is established, but this process has not completed yet.</string>
+./qt/forms/overviewpage.ui:               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Litecoin network after a connection is established, but this process has not completed yet.</string>
+./qt/paymentserver.cpp:    QString name("LitecoinQt");
+./qt/paymentserver.cpp:                    tr("URI cannot be parsed! This can be caused by an invalid Litecoin address or malformed URI parameters."),
+Binary file ./qt/libbitcoinqt_a-intro.o matches
+./qt/guiutil.cpp:    widget->setPlaceholderText(QObject::tr("Enter a Litecoin address (e.g. %1)").arg(
+./qt/guiutil.cpp:        return GetSpecialFolderPath(CSIDL_STARTUP) / "Litecoin.lnk";
+./qt/guiutil.cpp:        return GetSpecialFolderPath(CSIDL_STARTUP) / "Litecoin (testnet).lnk";
+./qt/guiutil.cpp:    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Litecoin (%s).lnk", chain);
+./qt/guiutil.cpp:            optionFile << "Name=Litecoin\n";
+./qt/guiutil.cpp:            optionFile << strprintf("Name=Litecoin (%s)\n", chain);
+Binary file ./qt/libbitcoinqt_a-overviewpage.o matches
+./qt/editaddressdialog.cpp:                tr("The entered address \"%1\" is not a valid Litecoin address.").arg(ui->addressEdit->text()),
+Binary file ./qt/libbitcoinqt_a-optionsdialog.o matches
+Binary file ./qt/libbitcoinqt_a-guiutil.o matches
+Binary file ./qt/libbitcoinqt_a-signverifymessagedialog.o matches
+Binary file ./qt/libbitcoinqt_a-modaloverlay.o matches
+Binary file ./qt/libbitcoinqt_a-editaddressdialog.o matches
+Binary file ./qt/woodcoin-qt matches
+./qt/sendcoinsdialog.cpp:        // Litecoin: Disable RBF
+./qt/sendcoinsdialog.cpp:        // Litecoin: Disable RBF
+./qt/sendcoinsdialog.cpp:        /* Litecoin: Disable RBF
+./qt/sendcoinsdialog.cpp:    // Litecoin: Disable RBF GUI
+./qt/sendcoinsdialog.cpp:            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid Litecoin address"));
+Binary file ./qt/libbitcoinqt_a-splashscreen.o matches
+./qt/guiconstants.h:#define QAPP_ORG_NAME "Litecoin"
+./qt/guiconstants.h:#define QAPP_APP_NAME_DEFAULT "Litecoin-Qt"
+./qt/guiconstants.h:#define QAPP_APP_NAME_SIGNET "Litecoin-Qt-signet"
+./qt/guiconstants.h:#define QAPP_APP_NAME_REGTEST "Litecoin-Qt-regtest"
+./qt/intro.cpp:        .arg(tr("Litecoin"))
+./qt/intro.cpp:        tr("%1 will download and store a copy of the Litecoin block chain.").arg(PACKAGE_NAME) + " " +
+Binary file ./qt/libbitcoinqt_a-receivecoinsdialog.o matches
+Binary file ./qt/libbitcoinqt.a matches
+Binary file ./qt/libbitcoinqt_a-sendcoinsentry.o matches
+Binary file ./qt/libbitcoinqt_a-bitcoin.o matches
+Binary file ./qt/libbitcoinqt_a-networkstyle.o matches
+./qt/README.md:This directory contains the LitecoinQT graphical user interface (GUI). It uses the cross-platform framework [Qt](https://www1.qt.io/developers/).
+./qt/README.md:Represents the main window of the Litecoin UI.
+Binary file ./qt/libbitcoinqt_a-paymentserver.o matches
+Binary file ./qt/libbitcoinqt_a-utilitydialog.o matches
+Binary file ./qt/libbitcoinqt_a-bitcoingui.o matches
+./qt/bitcoingui.cpp:    sendCoinsAction->setStatusTip(tr("Send coins to a Litecoin address"));
+./qt/bitcoingui.cpp:    signMessageAction->setStatusTip(tr("Sign messages with your Litecoin addresses to prove you own them"));
+./qt/bitcoingui.cpp:    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Litecoin addresses"));
+./qt/bitcoingui.cpp:    m_load_psbt_action->setStatusTip(tr("Load Partially Signed Litecoin Transaction"));
+./qt/bitcoingui.cpp:    m_load_psbt_clipboard_action->setStatusTip(tr("Load Partially Signed Litecoin Transaction from clipboard"));
+./qt/bitcoingui.cpp:    showHelpMessageAction->setStatusTip(tr("Show the %1 help message to get a list with possible Litecoin command-line options").arg(PACKAGE_NAME));
+./qt/bitcoingui.cpp:        tooltip = tr("%n active connection(s) to Litecoin network", "", count) + QString(".<br>") + tr("Click to disable network activity.");
+./qt/macnotificationhandler.mm:        return @"org.litecoin.Litecoin-Qt";
+Binary file ./woodcoin-wallet matches
+Binary file ./libbitcoin_util.a matches
+./bitcoin-cli-res.rc:            VALUE "CompanyName",        "Litecoin"
+./txdb.cpp:                // Litecoin: Disable PoW Sanity check while loading block index from disk.
+./txdb.cpp:                // requires recomputing every PoW hash during every Litecoin startup.
+Binary file ./woodcoind-bitcoind.o matches
+./mweb/mweb_models.h:// Copyright(C) 2011 - 2020 The Litecoin Core developers
+./Makefile:COPYRIGHT_HOLDERS_FINAL = The Litecoin Core developers
+./Makefile:COPYRIGHT_HOLDERS_SUBSTITUTION = Litecoin Core
+./Makefile:PACKAGE_NAME = Litecoin Core
+./Makefile:PACKAGE_STRING = Litecoin Core 0.21.2.2
+Binary file ./woodcoin_wallet-bitcoin-wallet.o matches
+Binary file ./util/libbitcoin_util_a-message.o matches
+Binary file ./util/libbitcoin_util_a-system.o matches
+./util/message.cpp:const std::string MESSAGE_MAGIC = "Litecoin Signed Message:\n";
+./bitcoind-res.rc:            VALUE "CompanyName",        "Litecoin"
+./bitcoind-res.rc:            VALUE "FileDescription",    "litecoind (Litecoin node with a JSON-RPC server)"
+Binary file ./libbitcoin_wallet_tool.a matches
+Binary file ./libbitcoin_server_a-addrdb.o matches
+Binary file ./woodcoin-cli matches
+./bench/checkblock.cpp:// Litecoin uses block height 878439, hash 0babe680f55a55d54339511226755f0837261da89a4e78eba4d6436a63026df8
+Binary file ./bench/bench_woodcoin matches
+Binary file ./bench/bench_litecoin matches
+./pow.cpp:    // Litecoin: This fixes an issue where a 51% attack can change difficulty at will.
+./pow.cpp:    // Litecoin: intermediate uint256 can overflow by 1 bit
+./validation.cpp:                // Litecoin: Only support BIP125 RBF when -mempoolreplacement arg is set
+Binary file ./libtest_util.a matches

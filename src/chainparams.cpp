@@ -129,7 +129,7 @@ public:
         vSeeds.emplace_back("dnsseed.woodcoin.org");
         vSeeds.emplace_back("dnsseed.logbin.org");
         vSeeds.emplace_back("dnsseed.woodcoin.info");
-      //  vSeeds.emplace_back("dnsseed.litecoinpool.org");
+      //  vSeeds.emplace_back("dnsseed.woodcoinpool.org");
       //  vSeeds.emplace_back("dnsseed.koin-project.com");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,73);
@@ -223,8 +223,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testnet-seed.litecointools.com");
-        vSeeds.emplace_back("seed-b.litecoin.loshan.co.uk");
+        vSeeds.emplace_back("testnet-seed.woodcointools.com");
+        vSeeds.emplace_back("seed-b.woodcoin.loshan.co.uk");
         vSeeds.emplace_back("dnsseed-testnet.thrasher.io");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
