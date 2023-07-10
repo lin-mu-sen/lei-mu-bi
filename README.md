@@ -18,7 +18,7 @@ including LItecoin and Bitcoin.
 
 What is Lei-Mu-Bi (类木比)?
 ----------------
-Lei-mu-bi is an attempt to utilize the latest litecoin-core software to create a 
+Lei-mu-bi is an attempt to utilize the latest woodcoin-core software to create a 
 full node that also operates on the woodcoin network.  
 
 License
@@ -31,10 +31,10 @@ Development Process
 -------------------
 
 The `master` branch is regularly built (see `doc/build-*.md` for instructions) and tested, but it is not guaranteed to be
-completely stable. [Tags](https://github.com/litecoin-project/litecoin/tags) are created
+completely stable. [Tags](https://github.com/woodcoin-project/woodcoin/tags) are created
 regularly from release branches to indicate new official, stable release versions of Litecoin Core.
 
-The https://github.com/litecoin-project/gui repository is used exclusively for the
+The https://github.com/woodcoin-project/gui repository is used exclusively for the
 development of the GUI. Its master branch is identical in all monotree
 repositories. Release branches and tags do not exist, so please do not fork
 that repository unless it is for development reasons.

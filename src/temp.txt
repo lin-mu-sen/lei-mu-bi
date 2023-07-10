@@ -37,7 +37,7 @@ Binary file ./libbitcoin_server.a matches
 Binary file ./woodcoin_tx-bitcoin-tx.o matches
 Binary file ./woodcoin_cli-bitcoin-cli.o matches
 ./bitcoin-tx-res.rc:            VALUE "CompanyName",        "Litecoin"
-./bitcoin-tx-res.rc:            VALUE "FileDescription",    "litecoin-tx (CLI Litecoin transaction editor utility)"
+./bitcoin-tx-res.rc:            VALUE "FileDescription",    "woodcoin-tx (CLI Litecoin transaction editor utility)"
 Binary file ./libbitcoin_wallet.a matches
 Binary file ./woodcoind matches
 ./test/pow_tests.cpp:    /* Litecoin: we allow overflowing by 1 bit
@@ -49,7 +49,7 @@ Binary file ./test/util/libtest_util_a-setup_common.o matches
 ./test/data/README.md:This directory contains data-driven tests for various aspects of Litecoin.
 ./test/README.md:unit testing framework, and since Litecoin Core already uses Boost, it makes
 Binary file ./test/test_woodcoin-net_tests.o matches
-Binary file ./test/test_litecoin matches
+Binary file ./test/test_woodcoin matches
 Binary file ./libbitcoin_server_a-init.o matches
 ./wallet/txlist.cpp:                // Received by Litecoin Address
 ./wallet/txlist.cpp:            // Sent to Litecoin Address
@@ -99,14 +99,14 @@ Binary file ./qt/test/test_woodcoin_qt-test_main.o matches
 Binary file ./qt/test/test_woodcoin-qt matches
 ./qt/test/wallettests.cpp:/* Litecoin: Disable RBF
 ./qt/test/wallettests.cpp:    // Litecoin: Disable BumpFee tests
-Binary file ./qt/test/test_litecoin-qt matches
+Binary file ./qt/test/test_woodcoin-qt matches
 ./qt/test/test_main.cpp:    app.setApplicationName("Litecoin-Qt-test");
 ./qt/forms/ui_signverifymessagedialog.h:        addressIn_SM->setToolTip(QApplication::translate("SignVerifyMessageDialog", "The Litecoin address to sign the message with", nullptr));
 ./qt/forms/ui_signverifymessagedialog.h:        signMessageButton_SM->setToolTip(QApplication::translate("SignVerifyMessageDialog", "Sign the message to prove you own this Litecoin address", nullptr));
 ./qt/forms/ui_signverifymessagedialog.h:        addressIn_VM->setToolTip(QApplication::translate("SignVerifyMessageDialog", "The Litecoin address the message was signed with", nullptr));
 ./qt/forms/ui_signverifymessagedialog.h:        verifyMessageButton_VM->setToolTip(QApplication::translate("SignVerifyMessageDialog", "Verify the message to ensure it was signed with the specified Litecoin address", nullptr));
 ./qt/forms/sendcoinsentry.ui:         <string>The Litecoin address to send the payment to</string>
-./qt/forms/sendcoinsentry.ui:       <string>A message that was attached to the litecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Litecoin network.</string>
+./qt/forms/sendcoinsentry.ui:       <string>A message that was attached to the woodcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Litecoin network.</string>
 ./qt/forms/ui_receivecoinsdialog.h:        label_3->setToolTip(QApplication::translate("ReceiveCoinsDialog", "An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Litecoin network.", nullptr));
 ./qt/forms/ui_optionsdialog.h:        mapPortUpnp->setToolTip(QApplication::translate("OptionsDialog", "Automatically open the Litecoin client port on the router. This only works when your router supports UPnP and it is enabled.", nullptr));
 ./qt/forms/ui_optionsdialog.h:        connectSocks->setToolTip(QApplication::translate("OptionsDialog", "Connect to the Litecoin network through a SOCKS5 proxy.", nullptr));
@@ -115,7 +115,7 @@ Binary file ./qt/test/test_litecoin-qt matches
 ./qt/forms/optionsdialog.ui:          <string>Connect to the Litecoin network through a SOCKS5 proxy.</string>
 ./qt/forms/optionsdialog.ui:          <string>Connect to the Litecoin network through a separate SOCKS5 proxy for Tor onion services.</string>
 ./qt/forms/ui_sendcoinsentry.h:        payTo->setToolTip(QApplication::translate("SendCoinsEntry", "The Litecoin address to send the payment to", nullptr));
-./qt/forms/ui_sendcoinsentry.h:        messageTextLabel->setToolTip(QApplication::translate("SendCoinsEntry", "A message that was attached to the litecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Litecoin network.", nullptr));
+./qt/forms/ui_sendcoinsentry.h:        messageTextLabel->setToolTip(QApplication::translate("SendCoinsEntry", "A message that was attached to the woodcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Litecoin network.", nullptr));
 ./qt/forms/signverifymessagedialog.ui:            <string>The Litecoin address to sign the message with</string>
 ./qt/forms/signverifymessagedialog.ui:            <string>Sign the message to prove you own this Litecoin address</string>
 ./qt/forms/signverifymessagedialog.ui:            <string>The Litecoin address the message was signed with</string>
@@ -171,7 +171,7 @@ Binary file ./qt/libbitcoinqt_a-bitcoingui.o matches
 ./qt/bitcoingui.cpp:    m_load_psbt_clipboard_action->setStatusTip(tr("Load Partially Signed Litecoin Transaction from clipboard"));
 ./qt/bitcoingui.cpp:    showHelpMessageAction->setStatusTip(tr("Show the %1 help message to get a list with possible Litecoin command-line options").arg(PACKAGE_NAME));
 ./qt/bitcoingui.cpp:        tooltip = tr("%n active connection(s) to Litecoin network", "", count) + QString(".<br>") + tr("Click to disable network activity.");
-./qt/macnotificationhandler.mm:        return @"org.litecoin.Litecoin-Qt";
+./qt/macnotificationhandler.mm:        return @"org.woodcoin.Litecoin-Qt";
 Binary file ./woodcoin-wallet matches
 Binary file ./libbitcoin_util.a matches
 ./bitcoin-cli-res.rc:            VALUE "CompanyName",        "Litecoin"
@@ -188,13 +188,13 @@ Binary file ./util/libbitcoin_util_a-message.o matches
 Binary file ./util/libbitcoin_util_a-system.o matches
 ./util/message.cpp:const std::string MESSAGE_MAGIC = "Litecoin Signed Message:\n";
 ./bitcoind-res.rc:            VALUE "CompanyName",        "Litecoin"
-./bitcoind-res.rc:            VALUE "FileDescription",    "litecoind (Litecoin node with a JSON-RPC server)"
+./bitcoind-res.rc:            VALUE "FileDescription",    "woodcoind (Litecoin node with a JSON-RPC server)"
 Binary file ./libbitcoin_wallet_tool.a matches
 Binary file ./libbitcoin_server_a-addrdb.o matches
 Binary file ./woodcoin-cli matches
 ./bench/checkblock.cpp:// Litecoin uses block height 878439, hash 0babe680f55a55d54339511226755f0837261da89a4e78eba4d6436a63026df8
 Binary file ./bench/bench_woodcoin matches
-Binary file ./bench/bench_litecoin matches
+Binary file ./bench/bench_woodcoin matches
 ./pow.cpp:    // Litecoin: This fixes an issue where a 51% attack can change difficulty at will.
 ./pow.cpp:    // Litecoin: intermediate uint256 can overflow by 1 bit
 ./validation.cpp:                // Litecoin: Only support BIP125 RBF when -mempoolreplacement arg is set

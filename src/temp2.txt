@@ -1,292 +1,292 @@
-./libmw/test/tests/consensus/.deps/test_test_litecoin-Test_StealthSumValidator.Po:libmw/test/tests/consensus/test_test_litecoin-Test_StealthSumValidator.o: \
-./libmw/test/tests/wallet/.deps/test_test_litecoin-Test_Keychain.Po:libmw/test/tests/wallet/test_test_litecoin-Test_Keychain.o: \
-./libmw/test/tests/models/block/.deps/test_test_litecoin-Test_Block.Po:libmw/test/tests/models/block/test_test_litecoin-Test_Block.o: \
-./libmw/test/tests/models/block/.deps/test_test_litecoin-Test_Header.Po:libmw/test/tests/models/block/test_test_litecoin-Test_Header.o: \
-./libmw/test/tests/models/tx/.deps/test_test_litecoin-Test_PegInCoin.Po:libmw/test/tests/models/tx/test_test_litecoin-Test_PegInCoin.o: \
-./libmw/test/tests/models/tx/.deps/test_test_litecoin-Test_Input.Po:libmw/test/tests/models/tx/test_test_litecoin-Test_Input.o: \
-./libmw/test/tests/models/tx/.deps/test_test_litecoin-Test_Transaction.Po:libmw/test/tests/models/tx/test_test_litecoin-Test_Transaction.o: \
-./libmw/test/tests/models/tx/.deps/test_test_litecoin-Test_PegOutCoin.Po:libmw/test/tests/models/tx/test_test_litecoin-Test_PegOutCoin.o: \
-./libmw/test/tests/models/tx/.deps/test_test_litecoin-Test_Kernel.Po:libmw/test/tests/models/tx/test_test_litecoin-Test_Kernel.o: \
-./libmw/test/tests/models/crypto/.deps/test_test_litecoin-Test_BigInteger.Po:libmw/test/tests/models/crypto/test_test_litecoin-Test_BigInteger.o: \
-./libmw/test/tests/mmr/.deps/test_test_litecoin-Test_MMR.Po:libmw/test/tests/mmr/test_test_litecoin-Test_MMR.o: \
-./libmw/test/tests/mmr/.deps/test_test_litecoin-Test_MMRUtil.Po:libmw/test/tests/mmr/test_test_litecoin-Test_MMRUtil.o: \
-./libmw/test/tests/mmr/.deps/test_test_litecoin-Test_LeafIndex.Po:libmw/test/tests/mmr/test_test_litecoin-Test_LeafIndex.o: \
-./libmw/test/tests/mmr/.deps/test_test_litecoin-Test_Index.Po:libmw/test/tests/mmr/test_test_litecoin-Test_Index.o: \
-./libmw/test/tests/mmr/.deps/test_test_litecoin-Test_PruneList.Po:libmw/test/tests/mmr/test_test_litecoin-Test_PruneList.o: \
-./libmw/test/tests/crypto/.deps/test_test_litecoin-Test_AggSig.Po:libmw/test/tests/crypto/test_test_litecoin-Test_AggSig.o: \
-./libmw/test/tests/node/.deps/test_test_litecoin-Test_MineChain.Po:libmw/test/tests/node/test_test_litecoin-Test_MineChain.o: \
-./libmw/test/tests/node/.deps/test_test_litecoin-Test_BlockBuilder.Po:libmw/test/tests/node/test_test_litecoin-Test_BlockBuilder.o: \
-./libmw/test/tests/node/.deps/test_test_litecoin-Test_Reorg.Po:libmw/test/tests/node/test_test_litecoin-Test_Reorg.o: \
-./libmw/test/tests/node/.deps/test_test_litecoin-Test_CoinsView.Po:libmw/test/tests/node/test_test_litecoin-Test_CoinsView.o: \
-./libmw/test/framework/src/models/.deps/test_test_litecoin-Tx.Po:libmw/test/framework/src/models/test_test_litecoin-Tx.o: \
-./libmw/test/framework/src/.deps/test_test_litecoin-TxBuilder.Po:libmw/test/framework/src/test_test_litecoin-TxBuilder.o: \
-./Makefile.test.include:bin_PROGRAMS += test/test_litecoin
-./Makefile.test.include:TEST_BINARY=test/test_litecoin$(EXEEXT)
-./Makefile.test.include:test_test_litecoin_SOURCES = $(BITCOIN_TEST_SUITE) $(BITCOIN_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
-./Makefile.test.include:test_test_litecoin_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(TESTDEFS) $(EVENT_CFLAGS) $(LIBMW_CPPFLAGS) -Ilibmw/test/framework/include
-./Makefile.test.include:test_test_litecoin_LDADD = $(LIBTEST_UTIL)
-./Makefile.test.include:test_test_litecoin_LDADD += $(LIBBITCOIN_WALLET)
-./Makefile.test.include:test_test_litecoin_LDADD += $(LIBBITCOIN_SERVER) $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) \
-./Makefile.test.include:test_test_litecoin_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-./Makefile.test.include:test_test_litecoin_LDADD += $(BDB_LIBS) $(MINIUPNPC_LIBS) $(CRYPTO_LIBS) $(SQLITE_LIBS)
-./Makefile.test.include:test_test_litecoin_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS) -static
-./Makefile.test.include:test_test_litecoin_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
-./Makefile.test.include:nodist_test_test_litecoin_SOURCES = $(GENERATED_TEST_FILES)
-./Makefile.test.include:litecoin_test: $(TEST_BINARY)
-./Makefile.test.include:litecoin_test: $(TEST_BINARY) $(BENCH_BINARY)
-./Makefile.test.include:litecoin_test: $(TEST_BINARY)
-./Makefile.test.include:litecoin_test_check: $(TEST_BINARY) FORCE
-./Makefile.test.include:litecoin_test_clean : FORCE
-./Makefile.test.include:	rm -f $(CLEAN_LITECOIN_TEST) $(test_test_litecoin_OBJECTS) $(TEST_BINARY)
-./Makefile.test.include:	@echo "Running bench/bench_litecoin ..."
-./bitcoin-tx-res.rc:            VALUE "FileDescription",    "litecoin-tx (CLI Litecoin transaction editor utility)"
-./bitcoin-tx-res.rc:            VALUE "InternalName",       "litecoin-tx"
-./bitcoin-tx-res.rc:            VALUE "OriginalFilename",   "litecoin-tx.exe"
-./bitcoin-tx-res.rc:            VALUE "ProductName",        "litecoin-tx"
-./test/.deps/test_litecoin-fs_tests.Po:test/test_litecoin-fs_tests.o: test/fs_tests.cpp \
-./test/.deps/test_litecoin-validation_chainstatemanager_tests.Po:test/test_litecoin-validation_chainstatemanager_tests.o: \
-./test/.deps/test_litecoin-getarg_tests.Po:test/test_litecoin-getarg_tests.o: test/getarg_tests.cpp \
-./test/.deps/test_litecoin-checkqueue_tests.Po:test/test_litecoin-checkqueue_tests.o: test/checkqueue_tests.cpp \
-./test/.deps/test_litecoin-script_standard_tests.Po:test/test_litecoin-script_standard_tests.o: \
-./test/.deps/test_litecoin-bswap_tests.Po:test/test_litecoin-bswap_tests.o: test/bswap_tests.cpp \
-./test/.deps/test_litecoin-rpc_tests.Po:test/test_litecoin-rpc_tests.o: test/rpc_tests.cpp \
-./test/.deps/test_litecoin-merkle_tests.Po:test/test_litecoin-merkle_tests.o: test/merkle_tests.cpp \
-./test/.deps/test_litecoin-reverselock_tests.Po:test/test_litecoin-reverselock_tests.o: test/reverselock_tests.cpp \
-./test/.deps/test_litecoin-validation_tests.Po:test/test_litecoin-validation_tests.o: test/validation_tests.cpp \
-./test/.deps/test_litecoin-txvalidationcache_tests.Po:test/test_litecoin-txvalidationcache_tests.o: \
-./test/.deps/test_litecoin-scriptnum_tests.Po:test/test_litecoin-scriptnum_tests.o: test/scriptnum_tests.cpp \
-./test/.deps/test_litecoin-blockfilter_index_tests.Po:test/test_litecoin-blockfilter_index_tests.o: \
-./test/.deps/test_litecoin-txvalidation_tests.Po:test/test_litecoin-txvalidation_tests.o: test/txvalidation_tests.cpp \
-./test/.deps/test_litecoin-versionbits_tests.Po:test/test_litecoin-versionbits_tests.o: test/versionbits_tests.cpp \
-./test/.deps/test_litecoin-miner_tests.Po:test/test_litecoin-miner_tests.o: test/miner_tests.cpp \
-./test/.deps/test_litecoin-logging_tests.Po:test/test_litecoin-logging_tests.o: test/logging_tests.cpp \
-./test/.deps/test_litecoin-bip32_tests.Po:test/test_litecoin-bip32_tests.o: test/bip32_tests.cpp \
-./test/.deps/test_litecoin-compress_tests.Po:test/test_litecoin-compress_tests.o: test/compress_tests.cpp \
-./test/.deps/test_litecoin-validationinterface_tests.Po:test/test_litecoin-validationinterface_tests.o: \
-./test/.deps/test_litecoin-mempool_tests.Po:test/test_litecoin-mempool_tests.o: test/mempool_tests.cpp \
-./test/.deps/test_litecoin-txindex_tests.Po:test/test_litecoin-txindex_tests.o: test/txindex_tests.cpp \
-./test/.deps/test_litecoin-sync_tests.Po:test/test_litecoin-sync_tests.o: test/sync_tests.cpp \
-./test/.deps/test_litecoin-sighash_tests.Po:test/test_litecoin-sighash_tests.o: test/sighash_tests.cpp \
-./test/.deps/test_litecoin-txrequest_tests.Po:test/test_litecoin-txrequest_tests.o: test/txrequest_tests.cpp \
-./test/.deps/test_litecoin-skiplist_tests.Po:test/test_litecoin-skiplist_tests.o: test/skiplist_tests.cpp \
-./test/.deps/test_litecoin-netbase_tests.Po:test/test_litecoin-netbase_tests.o: test/netbase_tests.cpp \
-./test/.deps/test_litecoin-script_tests.Po:test/test_litecoin-script_tests.o: test/script_tests.cpp \
-./test/.deps/test_litecoin-transaction_tests.Po:test/test_litecoin-transaction_tests.o: test/transaction_tests.cpp \
-./test/.deps/test_litecoin-pow_tests.Po:test/test_litecoin-pow_tests.o: test/pow_tests.cpp \
-./test/.deps/test_litecoin-denialofservice_tests.Po:test/test_litecoin-denialofservice_tests.o: \
-./test/.deps/test_litecoin-random_tests.Po:test/test_litecoin-random_tests.o: test/random_tests.cpp \
-./test/.deps/test_litecoin-compilerbug_tests.Po:test/test_litecoin-compilerbug_tests.o: test/compilerbug_tests.cpp \
-./test/.deps/test_litecoin-util_tests.Po:test/test_litecoin-util_tests.o: test/util_tests.cpp \
-./test/.deps/test_litecoin-system_tests.Po:test/test_litecoin-system_tests.o: test/system_tests.cpp \
-./test/.deps/test_litecoin-amount_tests.Po:test/test_litecoin-amount_tests.o: test/amount_tests.cpp \
-./test/.deps/test_litecoin-scheduler_tests.Po:test/test_litecoin-scheduler_tests.o: test/scheduler_tests.cpp \
-./test/.deps/test_litecoin-dbwrapper_tests.Po:test/test_litecoin-dbwrapper_tests.o: test/dbwrapper_tests.cpp \
-./test/.deps/test_litecoin-blockchain_tests.Po:test/test_litecoin-blockchain_tests.o: test/blockchain_tests.cpp \
-./test/.deps/test_litecoin-crypto_tests.Po:test/test_litecoin-crypto_tests.o: test/crypto_tests.cpp \
-./test/.deps/test_litecoin-coins_tests.Po:test/test_litecoin-coins_tests.o: test/coins_tests.cpp \
-./test/.deps/test_litecoin-key_tests.Po:test/test_litecoin-key_tests.o: test/key_tests.cpp \
-./test/.deps/test_litecoin-main.Po:test/test_litecoin-main.o: test/main.cpp /usr/include/stdc-predef.h \
-./test/.deps/test_litecoin-raii_event_tests.Po:test/test_litecoin-raii_event_tests.o: test/raii_event_tests.cpp \
-./test/.deps/test_litecoin-streams_tests.Po:test/test_litecoin-streams_tests.o: test/streams_tests.cpp \
-./test/.deps/test_litecoin-key_io_tests.Po:test/test_litecoin-key_io_tests.o: test/key_io_tests.cpp \
-./test/.deps/test_litecoin-serialize_tests.Po:test/test_litecoin-serialize_tests.o: test/serialize_tests.cpp \
-./test/.deps/test_litecoin-hash_tests.Po:test/test_litecoin-hash_tests.o: test/hash_tests.cpp \
-./test/.deps/test_litecoin-net_tests.Po:test/test_litecoin-net_tests.o: test/net_tests.cpp \
-./test/.deps/test_litecoin-prevector_tests.Po:test/test_litecoin-prevector_tests.o: test/prevector_tests.cpp \
-./test/.deps/test_litecoin-bech32_tests.Po:test/test_litecoin-bech32_tests.o: test/bech32_tests.cpp \
-./test/.deps/test_litecoin-uint256_tests.Po:test/test_litecoin-uint256_tests.o: test/uint256_tests.cpp \
-./test/.deps/test_litecoin-scrypt_tests.Po:test/test_litecoin-scrypt_tests.o: test/scrypt_tests.cpp \
-./test/.deps/test_litecoin-bloom_tests.Po:test/test_litecoin-bloom_tests.o: test/bloom_tests.cpp \
-./test/.deps/test_litecoin-base64_tests.Po:test/test_litecoin-base64_tests.o: test/base64_tests.cpp \
-./test/.deps/test_litecoin-util_threadnames_tests.Po:test/test_litecoin-util_threadnames_tests.o: \
-./test/.deps/test_litecoin-addrman_tests.Po:test/test_litecoin-addrman_tests.o: test/addrman_tests.cpp \
-./test/.deps/test_litecoin-allocator_tests.Po:test/test_litecoin-allocator_tests.o: test/allocator_tests.cpp \
-./test/.deps/test_litecoin-torcontrol_tests.Po:test/test_litecoin-torcontrol_tests.o: test/torcontrol_tests.cpp \
-./test/.deps/test_litecoin-sanity_tests.Po:test/test_litecoin-sanity_tests.o: test/sanity_tests.cpp \
-./test/.deps/test_litecoin-policyestimator_tests.Po:test/test_litecoin-policyestimator_tests.o: \
-./test/.deps/test_litecoin-sigopcount_tests.Po:test/test_litecoin-sigopcount_tests.o: test/sigopcount_tests.cpp \
-./test/.deps/test_litecoin-base32_tests.Po:test/test_litecoin-base32_tests.o: test/base32_tests.cpp \
-./test/.deps/test_litecoin-blockfilter_tests.Po:test/test_litecoin-blockfilter_tests.o: test/blockfilter_tests.cpp \
-./test/.deps/test_litecoin-descriptor_tests.Po:test/test_litecoin-descriptor_tests.o: test/descriptor_tests.cpp \
-./test/.deps/test_litecoin-flatfile_tests.Po:test/test_litecoin-flatfile_tests.o: test/flatfile_tests.cpp \
-./test/.deps/test_litecoin-multisig_tests.Po:test/test_litecoin-multisig_tests.o: test/multisig_tests.cpp \
-./test/.deps/test_litecoin-interfaces_tests.Po:test/test_litecoin-interfaces_tests.o: test/interfaces_tests.cpp \
-./test/.deps/test_litecoin-base58_tests.Po:test/test_litecoin-base58_tests.o: test/base58_tests.cpp \
-./test/.deps/test_litecoin-merkleblock_tests.Po:test/test_litecoin-merkleblock_tests.o: test/merkleblock_tests.cpp \
-./test/.deps/test_litecoin-settings_tests.Po:test/test_litecoin-settings_tests.o: test/settings_tests.cpp \
-./test/.deps/test_litecoin-validation_flush_tests.Po:test/test_litecoin-validation_flush_tests.o: \
-./test/.deps/test_litecoin-arith_uint256_tests.Po:test/test_litecoin-arith_uint256_tests.o: test/arith_uint256_tests.cpp \
-./test/.deps/test_litecoin-policy_fee_tests.Po:test/test_litecoin-policy_fee_tests.o: test/policy_fee_tests.cpp \
-./test/.deps/test_litecoin-validation_chainstate_tests.Po:test/test_litecoin-validation_chainstate_tests.o: \
-./test/.deps/test_litecoin-cuckoocache_tests.Po:test/test_litecoin-cuckoocache_tests.o: test/cuckoocache_tests.cpp \
-./test/.deps/test_litecoin-validation_block_tests.Po:test/test_litecoin-validation_block_tests.o: \
-./test/.deps/test_litecoin-pmt_tests.Po:test/test_litecoin-pmt_tests.o: test/pmt_tests.cpp \
-./test/.deps/test_litecoin-ref_tests.Po:test/test_litecoin-ref_tests.o: test/ref_tests.cpp \
-./test/.deps/test_litecoin-script_p2sh_tests.Po:test/test_litecoin-script_p2sh_tests.o: test/script_p2sh_tests.cpp \
-./test/.deps/test_litecoin-timedata_tests.Po:test/test_litecoin-timedata_tests.o: test/timedata_tests.cpp \
-./test/README.md:The build system is set up to compile an executable called `test_litecoin`
-./test/README.md:To run the unit tests manually, launch `src/test/test_litecoin`. To recompile
-./test/README.md:To run the GUI unit tests manually, launch `src/qt/test/test_litecoin-qt`
-./test/README.md:`test_litecoin` has some built-in command-line arguments; for
-./test/README.md:    test_litecoin --log_level=all --run_test=getarg_tests -- DEBUG_LOG_OUT
-./test/README.md:    test_litecoin --run_test=getarg_tests/doubledash
-./test/README.md:Run `test_litecoin --help` for the full list.
-./test/README.md:For debugging you can launch the `test_litecoin` executable with `gdb`or `lldb` and
-./test/README.md:gdb src/test/test_litecoin
-./wallet/test/.deps/test_test_litecoin-wallet_test_fixture.Po:wallet/test/test_test_litecoin-wallet_test_fixture.o: \
-./wallet/test/.deps/qt_test_test_litecoin_qt-wallet_test_fixture.Po:wallet/test/qt_test_test_litecoin_qt-wallet_test_fixture.o: \
-./wallet/test/.deps/test_test_litecoin-ismine_tests.Po:wallet/test/test_test_litecoin-ismine_tests.o: \
-./wallet/test/.deps/test_test_litecoin-init_tests.Po:wallet/test/test_test_litecoin-init_tests.o: wallet/test/init_tests.cpp \
-./wallet/test/.deps/test_test_litecoin-psbt_wallet_tests.Po:wallet/test/test_test_litecoin-psbt_wallet_tests.o: \
-./wallet/test/.deps/test_test_litecoin-wallet_tests.Po:wallet/test/test_test_litecoin-wallet_tests.o: \
-./wallet/test/.deps/test_test_litecoin-init_test_fixture.Po:wallet/test/test_test_litecoin-init_test_fixture.o: \
-./wallet/test/.deps/test_test_litecoin-coinselector_tests.Po:wallet/test/test_test_litecoin-coinselector_tests.o: \
-./wallet/test/.deps/test_test_litecoin-wallet_crypto_tests.Po:wallet/test/test_test_litecoin-wallet_crypto_tests.o: \
-./wallet/test/.deps/test_test_litecoin-scriptpubkeyman_tests.Po:wallet/test/test_test_litecoin-scriptpubkeyman_tests.o: \
-./wallet/test/.deps/test_test_litecoin-db_tests.Po:wallet/test/test_test_litecoin-db_tests.o: wallet/test/db_tests.cpp \
-./bitcoin-wallet-res.rc:            VALUE "FileDescription",    "litecoin-wallet (CLI tool for " PACKAGE_NAME " wallets)"
-./bitcoin-wallet-res.rc:            VALUE "InternalName",       "litecoin-wallet"
-./bitcoin-wallet-res.rc:            VALUE "OriginalFilename",   "litecoin-wallet.exe"
-./bitcoin-wallet-res.rc:            VALUE "ProductName",        "litecoin-wallet"
-./qt/res/bitcoin-qt-res.rc:            VALUE "InternalName",       "litecoin-qt"
-./qt/res/bitcoin-qt-res.rc:            VALUE "OriginalFilename",   "litecoin-qt.exe"
+./libmw/test/tests/consensus/.deps/test_test_woodcoin-Test_StealthSumValidator.Po:libmw/test/tests/consensus/test_test_woodcoin-Test_StealthSumValidator.o: \
+./libmw/test/tests/wallet/.deps/test_test_woodcoin-Test_Keychain.Po:libmw/test/tests/wallet/test_test_woodcoin-Test_Keychain.o: \
+./libmw/test/tests/models/block/.deps/test_test_woodcoin-Test_Block.Po:libmw/test/tests/models/block/test_test_woodcoin-Test_Block.o: \
+./libmw/test/tests/models/block/.deps/test_test_woodcoin-Test_Header.Po:libmw/test/tests/models/block/test_test_woodcoin-Test_Header.o: \
+./libmw/test/tests/models/tx/.deps/test_test_woodcoin-Test_PegInCoin.Po:libmw/test/tests/models/tx/test_test_woodcoin-Test_PegInCoin.o: \
+./libmw/test/tests/models/tx/.deps/test_test_woodcoin-Test_Input.Po:libmw/test/tests/models/tx/test_test_woodcoin-Test_Input.o: \
+./libmw/test/tests/models/tx/.deps/test_test_woodcoin-Test_Transaction.Po:libmw/test/tests/models/tx/test_test_woodcoin-Test_Transaction.o: \
+./libmw/test/tests/models/tx/.deps/test_test_woodcoin-Test_PegOutCoin.Po:libmw/test/tests/models/tx/test_test_woodcoin-Test_PegOutCoin.o: \
+./libmw/test/tests/models/tx/.deps/test_test_woodcoin-Test_Kernel.Po:libmw/test/tests/models/tx/test_test_woodcoin-Test_Kernel.o: \
+./libmw/test/tests/models/crypto/.deps/test_test_woodcoin-Test_BigInteger.Po:libmw/test/tests/models/crypto/test_test_woodcoin-Test_BigInteger.o: \
+./libmw/test/tests/mmr/.deps/test_test_woodcoin-Test_MMR.Po:libmw/test/tests/mmr/test_test_woodcoin-Test_MMR.o: \
+./libmw/test/tests/mmr/.deps/test_test_woodcoin-Test_MMRUtil.Po:libmw/test/tests/mmr/test_test_woodcoin-Test_MMRUtil.o: \
+./libmw/test/tests/mmr/.deps/test_test_woodcoin-Test_LeafIndex.Po:libmw/test/tests/mmr/test_test_woodcoin-Test_LeafIndex.o: \
+./libmw/test/tests/mmr/.deps/test_test_woodcoin-Test_Index.Po:libmw/test/tests/mmr/test_test_woodcoin-Test_Index.o: \
+./libmw/test/tests/mmr/.deps/test_test_woodcoin-Test_PruneList.Po:libmw/test/tests/mmr/test_test_woodcoin-Test_PruneList.o: \
+./libmw/test/tests/crypto/.deps/test_test_woodcoin-Test_AggSig.Po:libmw/test/tests/crypto/test_test_woodcoin-Test_AggSig.o: \
+./libmw/test/tests/node/.deps/test_test_woodcoin-Test_MineChain.Po:libmw/test/tests/node/test_test_woodcoin-Test_MineChain.o: \
+./libmw/test/tests/node/.deps/test_test_woodcoin-Test_BlockBuilder.Po:libmw/test/tests/node/test_test_woodcoin-Test_BlockBuilder.o: \
+./libmw/test/tests/node/.deps/test_test_woodcoin-Test_Reorg.Po:libmw/test/tests/node/test_test_woodcoin-Test_Reorg.o: \
+./libmw/test/tests/node/.deps/test_test_woodcoin-Test_CoinsView.Po:libmw/test/tests/node/test_test_woodcoin-Test_CoinsView.o: \
+./libmw/test/framework/src/models/.deps/test_test_woodcoin-Tx.Po:libmw/test/framework/src/models/test_test_woodcoin-Tx.o: \
+./libmw/test/framework/src/.deps/test_test_woodcoin-TxBuilder.Po:libmw/test/framework/src/test_test_woodcoin-TxBuilder.o: \
+./Makefile.test.include:bin_PROGRAMS += test/test_woodcoin
+./Makefile.test.include:TEST_BINARY=test/test_woodcoin$(EXEEXT)
+./Makefile.test.include:test_test_woodcoin_SOURCES = $(BITCOIN_TEST_SUITE) $(BITCOIN_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
+./Makefile.test.include:test_test_woodcoin_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(TESTDEFS) $(EVENT_CFLAGS) $(LIBMW_CPPFLAGS) -Ilibmw/test/framework/include
+./Makefile.test.include:test_test_woodcoin_LDADD = $(LIBTEST_UTIL)
+./Makefile.test.include:test_test_woodcoin_LDADD += $(LIBBITCOIN_WALLET)
+./Makefile.test.include:test_test_woodcoin_LDADD += $(LIBBITCOIN_SERVER) $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) \
+./Makefile.test.include:test_test_woodcoin_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+./Makefile.test.include:test_test_woodcoin_LDADD += $(BDB_LIBS) $(MINIUPNPC_LIBS) $(CRYPTO_LIBS) $(SQLITE_LIBS)
+./Makefile.test.include:test_test_woodcoin_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS) -static
+./Makefile.test.include:test_test_woodcoin_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+./Makefile.test.include:nodist_test_test_woodcoin_SOURCES = $(GENERATED_TEST_FILES)
+./Makefile.test.include:woodcoin_test: $(TEST_BINARY)
+./Makefile.test.include:woodcoin_test: $(TEST_BINARY) $(BENCH_BINARY)
+./Makefile.test.include:woodcoin_test: $(TEST_BINARY)
+./Makefile.test.include:woodcoin_test_check: $(TEST_BINARY) FORCE
+./Makefile.test.include:woodcoin_test_clean : FORCE
+./Makefile.test.include:	rm -f $(CLEAN_LITECOIN_TEST) $(test_test_woodcoin_OBJECTS) $(TEST_BINARY)
+./Makefile.test.include:	@echo "Running bench/bench_woodcoin ..."
+./bitcoin-tx-res.rc:            VALUE "FileDescription",    "woodcoin-tx (CLI Litecoin transaction editor utility)"
+./bitcoin-tx-res.rc:            VALUE "InternalName",       "woodcoin-tx"
+./bitcoin-tx-res.rc:            VALUE "OriginalFilename",   "woodcoin-tx.exe"
+./bitcoin-tx-res.rc:            VALUE "ProductName",        "woodcoin-tx"
+./test/.deps/test_woodcoin-fs_tests.Po:test/test_woodcoin-fs_tests.o: test/fs_tests.cpp \
+./test/.deps/test_woodcoin-validation_chainstatemanager_tests.Po:test/test_woodcoin-validation_chainstatemanager_tests.o: \
+./test/.deps/test_woodcoin-getarg_tests.Po:test/test_woodcoin-getarg_tests.o: test/getarg_tests.cpp \
+./test/.deps/test_woodcoin-checkqueue_tests.Po:test/test_woodcoin-checkqueue_tests.o: test/checkqueue_tests.cpp \
+./test/.deps/test_woodcoin-script_standard_tests.Po:test/test_woodcoin-script_standard_tests.o: \
+./test/.deps/test_woodcoin-bswap_tests.Po:test/test_woodcoin-bswap_tests.o: test/bswap_tests.cpp \
+./test/.deps/test_woodcoin-rpc_tests.Po:test/test_woodcoin-rpc_tests.o: test/rpc_tests.cpp \
+./test/.deps/test_woodcoin-merkle_tests.Po:test/test_woodcoin-merkle_tests.o: test/merkle_tests.cpp \
+./test/.deps/test_woodcoin-reverselock_tests.Po:test/test_woodcoin-reverselock_tests.o: test/reverselock_tests.cpp \
+./test/.deps/test_woodcoin-validation_tests.Po:test/test_woodcoin-validation_tests.o: test/validation_tests.cpp \
+./test/.deps/test_woodcoin-txvalidationcache_tests.Po:test/test_woodcoin-txvalidationcache_tests.o: \
+./test/.deps/test_woodcoin-scriptnum_tests.Po:test/test_woodcoin-scriptnum_tests.o: test/scriptnum_tests.cpp \
+./test/.deps/test_woodcoin-blockfilter_index_tests.Po:test/test_woodcoin-blockfilter_index_tests.o: \
+./test/.deps/test_woodcoin-txvalidation_tests.Po:test/test_woodcoin-txvalidation_tests.o: test/txvalidation_tests.cpp \
+./test/.deps/test_woodcoin-versionbits_tests.Po:test/test_woodcoin-versionbits_tests.o: test/versionbits_tests.cpp \
+./test/.deps/test_woodcoin-miner_tests.Po:test/test_woodcoin-miner_tests.o: test/miner_tests.cpp \
+./test/.deps/test_woodcoin-logging_tests.Po:test/test_woodcoin-logging_tests.o: test/logging_tests.cpp \
+./test/.deps/test_woodcoin-bip32_tests.Po:test/test_woodcoin-bip32_tests.o: test/bip32_tests.cpp \
+./test/.deps/test_woodcoin-compress_tests.Po:test/test_woodcoin-compress_tests.o: test/compress_tests.cpp \
+./test/.deps/test_woodcoin-validationinterface_tests.Po:test/test_woodcoin-validationinterface_tests.o: \
+./test/.deps/test_woodcoin-mempool_tests.Po:test/test_woodcoin-mempool_tests.o: test/mempool_tests.cpp \
+./test/.deps/test_woodcoin-txindex_tests.Po:test/test_woodcoin-txindex_tests.o: test/txindex_tests.cpp \
+./test/.deps/test_woodcoin-sync_tests.Po:test/test_woodcoin-sync_tests.o: test/sync_tests.cpp \
+./test/.deps/test_woodcoin-sighash_tests.Po:test/test_woodcoin-sighash_tests.o: test/sighash_tests.cpp \
+./test/.deps/test_woodcoin-txrequest_tests.Po:test/test_woodcoin-txrequest_tests.o: test/txrequest_tests.cpp \
+./test/.deps/test_woodcoin-skiplist_tests.Po:test/test_woodcoin-skiplist_tests.o: test/skiplist_tests.cpp \
+./test/.deps/test_woodcoin-netbase_tests.Po:test/test_woodcoin-netbase_tests.o: test/netbase_tests.cpp \
+./test/.deps/test_woodcoin-script_tests.Po:test/test_woodcoin-script_tests.o: test/script_tests.cpp \
+./test/.deps/test_woodcoin-transaction_tests.Po:test/test_woodcoin-transaction_tests.o: test/transaction_tests.cpp \
+./test/.deps/test_woodcoin-pow_tests.Po:test/test_woodcoin-pow_tests.o: test/pow_tests.cpp \
+./test/.deps/test_woodcoin-denialofservice_tests.Po:test/test_woodcoin-denialofservice_tests.o: \
+./test/.deps/test_woodcoin-random_tests.Po:test/test_woodcoin-random_tests.o: test/random_tests.cpp \
+./test/.deps/test_woodcoin-compilerbug_tests.Po:test/test_woodcoin-compilerbug_tests.o: test/compilerbug_tests.cpp \
+./test/.deps/test_woodcoin-util_tests.Po:test/test_woodcoin-util_tests.o: test/util_tests.cpp \
+./test/.deps/test_woodcoin-system_tests.Po:test/test_woodcoin-system_tests.o: test/system_tests.cpp \
+./test/.deps/test_woodcoin-amount_tests.Po:test/test_woodcoin-amount_tests.o: test/amount_tests.cpp \
+./test/.deps/test_woodcoin-scheduler_tests.Po:test/test_woodcoin-scheduler_tests.o: test/scheduler_tests.cpp \
+./test/.deps/test_woodcoin-dbwrapper_tests.Po:test/test_woodcoin-dbwrapper_tests.o: test/dbwrapper_tests.cpp \
+./test/.deps/test_woodcoin-blockchain_tests.Po:test/test_woodcoin-blockchain_tests.o: test/blockchain_tests.cpp \
+./test/.deps/test_woodcoin-crypto_tests.Po:test/test_woodcoin-crypto_tests.o: test/crypto_tests.cpp \
+./test/.deps/test_woodcoin-coins_tests.Po:test/test_woodcoin-coins_tests.o: test/coins_tests.cpp \
+./test/.deps/test_woodcoin-key_tests.Po:test/test_woodcoin-key_tests.o: test/key_tests.cpp \
+./test/.deps/test_woodcoin-main.Po:test/test_woodcoin-main.o: test/main.cpp /usr/include/stdc-predef.h \
+./test/.deps/test_woodcoin-raii_event_tests.Po:test/test_woodcoin-raii_event_tests.o: test/raii_event_tests.cpp \
+./test/.deps/test_woodcoin-streams_tests.Po:test/test_woodcoin-streams_tests.o: test/streams_tests.cpp \
+./test/.deps/test_woodcoin-key_io_tests.Po:test/test_woodcoin-key_io_tests.o: test/key_io_tests.cpp \
+./test/.deps/test_woodcoin-serialize_tests.Po:test/test_woodcoin-serialize_tests.o: test/serialize_tests.cpp \
+./test/.deps/test_woodcoin-hash_tests.Po:test/test_woodcoin-hash_tests.o: test/hash_tests.cpp \
+./test/.deps/test_woodcoin-net_tests.Po:test/test_woodcoin-net_tests.o: test/net_tests.cpp \
+./test/.deps/test_woodcoin-prevector_tests.Po:test/test_woodcoin-prevector_tests.o: test/prevector_tests.cpp \
+./test/.deps/test_woodcoin-bech32_tests.Po:test/test_woodcoin-bech32_tests.o: test/bech32_tests.cpp \
+./test/.deps/test_woodcoin-uint256_tests.Po:test/test_woodcoin-uint256_tests.o: test/uint256_tests.cpp \
+./test/.deps/test_woodcoin-scrypt_tests.Po:test/test_woodcoin-scrypt_tests.o: test/scrypt_tests.cpp \
+./test/.deps/test_woodcoin-bloom_tests.Po:test/test_woodcoin-bloom_tests.o: test/bloom_tests.cpp \
+./test/.deps/test_woodcoin-base64_tests.Po:test/test_woodcoin-base64_tests.o: test/base64_tests.cpp \
+./test/.deps/test_woodcoin-util_threadnames_tests.Po:test/test_woodcoin-util_threadnames_tests.o: \
+./test/.deps/test_woodcoin-addrman_tests.Po:test/test_woodcoin-addrman_tests.o: test/addrman_tests.cpp \
+./test/.deps/test_woodcoin-allocator_tests.Po:test/test_woodcoin-allocator_tests.o: test/allocator_tests.cpp \
+./test/.deps/test_woodcoin-torcontrol_tests.Po:test/test_woodcoin-torcontrol_tests.o: test/torcontrol_tests.cpp \
+./test/.deps/test_woodcoin-sanity_tests.Po:test/test_woodcoin-sanity_tests.o: test/sanity_tests.cpp \
+./test/.deps/test_woodcoin-policyestimator_tests.Po:test/test_woodcoin-policyestimator_tests.o: \
+./test/.deps/test_woodcoin-sigopcount_tests.Po:test/test_woodcoin-sigopcount_tests.o: test/sigopcount_tests.cpp \
+./test/.deps/test_woodcoin-base32_tests.Po:test/test_woodcoin-base32_tests.o: test/base32_tests.cpp \
+./test/.deps/test_woodcoin-blockfilter_tests.Po:test/test_woodcoin-blockfilter_tests.o: test/blockfilter_tests.cpp \
+./test/.deps/test_woodcoin-descriptor_tests.Po:test/test_woodcoin-descriptor_tests.o: test/descriptor_tests.cpp \
+./test/.deps/test_woodcoin-flatfile_tests.Po:test/test_woodcoin-flatfile_tests.o: test/flatfile_tests.cpp \
+./test/.deps/test_woodcoin-multisig_tests.Po:test/test_woodcoin-multisig_tests.o: test/multisig_tests.cpp \
+./test/.deps/test_woodcoin-interfaces_tests.Po:test/test_woodcoin-interfaces_tests.o: test/interfaces_tests.cpp \
+./test/.deps/test_woodcoin-base58_tests.Po:test/test_woodcoin-base58_tests.o: test/base58_tests.cpp \
+./test/.deps/test_woodcoin-merkleblock_tests.Po:test/test_woodcoin-merkleblock_tests.o: test/merkleblock_tests.cpp \
+./test/.deps/test_woodcoin-settings_tests.Po:test/test_woodcoin-settings_tests.o: test/settings_tests.cpp \
+./test/.deps/test_woodcoin-validation_flush_tests.Po:test/test_woodcoin-validation_flush_tests.o: \
+./test/.deps/test_woodcoin-arith_uint256_tests.Po:test/test_woodcoin-arith_uint256_tests.o: test/arith_uint256_tests.cpp \
+./test/.deps/test_woodcoin-policy_fee_tests.Po:test/test_woodcoin-policy_fee_tests.o: test/policy_fee_tests.cpp \
+./test/.deps/test_woodcoin-validation_chainstate_tests.Po:test/test_woodcoin-validation_chainstate_tests.o: \
+./test/.deps/test_woodcoin-cuckoocache_tests.Po:test/test_woodcoin-cuckoocache_tests.o: test/cuckoocache_tests.cpp \
+./test/.deps/test_woodcoin-validation_block_tests.Po:test/test_woodcoin-validation_block_tests.o: \
+./test/.deps/test_woodcoin-pmt_tests.Po:test/test_woodcoin-pmt_tests.o: test/pmt_tests.cpp \
+./test/.deps/test_woodcoin-ref_tests.Po:test/test_woodcoin-ref_tests.o: test/ref_tests.cpp \
+./test/.deps/test_woodcoin-script_p2sh_tests.Po:test/test_woodcoin-script_p2sh_tests.o: test/script_p2sh_tests.cpp \
+./test/.deps/test_woodcoin-timedata_tests.Po:test/test_woodcoin-timedata_tests.o: test/timedata_tests.cpp \
+./test/README.md:The build system is set up to compile an executable called `test_woodcoin`
+./test/README.md:To run the unit tests manually, launch `src/test/test_woodcoin`. To recompile
+./test/README.md:To run the GUI unit tests manually, launch `src/qt/test/test_woodcoin-qt`
+./test/README.md:`test_woodcoin` has some built-in command-line arguments; for
+./test/README.md:    test_woodcoin --log_level=all --run_test=getarg_tests -- DEBUG_LOG_OUT
+./test/README.md:    test_woodcoin --run_test=getarg_tests/doubledash
+./test/README.md:Run `test_woodcoin --help` for the full list.
+./test/README.md:For debugging you can launch the `test_woodcoin` executable with `gdb`or `lldb` and
+./test/README.md:gdb src/test/test_woodcoin
+./wallet/test/.deps/test_test_woodcoin-wallet_test_fixture.Po:wallet/test/test_test_woodcoin-wallet_test_fixture.o: \
+./wallet/test/.deps/qt_test_test_woodcoin_qt-wallet_test_fixture.Po:wallet/test/qt_test_test_woodcoin_qt-wallet_test_fixture.o: \
+./wallet/test/.deps/test_test_woodcoin-ismine_tests.Po:wallet/test/test_test_woodcoin-ismine_tests.o: \
+./wallet/test/.deps/test_test_woodcoin-init_tests.Po:wallet/test/test_test_woodcoin-init_tests.o: wallet/test/init_tests.cpp \
+./wallet/test/.deps/test_test_woodcoin-psbt_wallet_tests.Po:wallet/test/test_test_woodcoin-psbt_wallet_tests.o: \
+./wallet/test/.deps/test_test_woodcoin-wallet_tests.Po:wallet/test/test_test_woodcoin-wallet_tests.o: \
+./wallet/test/.deps/test_test_woodcoin-init_test_fixture.Po:wallet/test/test_test_woodcoin-init_test_fixture.o: \
+./wallet/test/.deps/test_test_woodcoin-coinselector_tests.Po:wallet/test/test_test_woodcoin-coinselector_tests.o: \
+./wallet/test/.deps/test_test_woodcoin-wallet_crypto_tests.Po:wallet/test/test_test_woodcoin-wallet_crypto_tests.o: \
+./wallet/test/.deps/test_test_woodcoin-scriptpubkeyman_tests.Po:wallet/test/test_test_woodcoin-scriptpubkeyman_tests.o: \
+./wallet/test/.deps/test_test_woodcoin-db_tests.Po:wallet/test/test_test_woodcoin-db_tests.o: wallet/test/db_tests.cpp \
+./bitcoin-wallet-res.rc:            VALUE "FileDescription",    "woodcoin-wallet (CLI tool for " PACKAGE_NAME " wallets)"
+./bitcoin-wallet-res.rc:            VALUE "InternalName",       "woodcoin-wallet"
+./bitcoin-wallet-res.rc:            VALUE "OriginalFilename",   "woodcoin-wallet.exe"
+./bitcoin-wallet-res.rc:            VALUE "ProductName",        "woodcoin-wallet"
+./qt/res/bitcoin-qt-res.rc:            VALUE "InternalName",       "woodcoin-qt"
+./qt/res/bitcoin-qt-res.rc:            VALUE "OriginalFilename",   "woodcoin-qt.exe"
 Binary file ./qt/libbitcoinqt_a-openuridialog.o matches
 Binary file ./qt/libbitcoinqt_a-sendcoinsdialog.o matches
 Binary file ./qt/test/test_woodcoin-qt matches
-./qt/test/.deps/test_litecoin_qt-moc_compattests.Po:qt/test/test_litecoin_qt-moc_compattests.o: qt/test/moc_compattests.cpp \
-./qt/test/.deps/test_litecoin_qt-rpcnestedtests.Po:qt/test/test_litecoin_qt-rpcnestedtests.o: qt/test/rpcnestedtests.cpp \
-./qt/test/.deps/test_litecoin_qt-apptests.Po:qt/test/test_litecoin_qt-apptests.o: qt/test/apptests.cpp \
-./qt/test/.deps/test_litecoin_qt-moc_uritests.Po:qt/test/test_litecoin_qt-moc_uritests.o: qt/test/moc_uritests.cpp \
-./qt/test/.deps/test_litecoin_qt-moc_wallettests.Po:qt/test/test_litecoin_qt-moc_wallettests.o: qt/test/moc_wallettests.cpp \
-./qt/test/.deps/test_litecoin_qt-moc_addressbooktests.Po:qt/test/test_litecoin_qt-moc_addressbooktests.o: \
-./qt/test/.deps/test_litecoin_qt-addressbooktests.Po:qt/test/test_litecoin_qt-addressbooktests.o: qt/test/addressbooktests.cpp \
-./qt/test/.deps/test_litecoin_qt-compattests.Po:qt/test/test_litecoin_qt-compattests.o: qt/test/compattests.cpp \
-./qt/test/.deps/test_litecoin_qt-moc_apptests.Po:qt/test/test_litecoin_qt-moc_apptests.o: qt/test/moc_apptests.cpp \
-./qt/test/.deps/test_litecoin_qt-uritests.Po:qt/test/test_litecoin_qt-uritests.o: qt/test/uritests.cpp \
-./qt/test/.deps/test_litecoin_qt-util.Po:qt/test/test_litecoin_qt-util.o: qt/test/util.cpp \
-./qt/test/.deps/test_litecoin_qt-moc_rpcnestedtests.Po:qt/test/test_litecoin_qt-moc_rpcnestedtests.o: \
-./qt/test/.deps/test_litecoin_qt-wallettests.Po:qt/test/test_litecoin_qt-wallettests.o: qt/test/wallettests.cpp \
-./qt/test/.deps/test_litecoin_qt-test_main.Po:qt/test/test_litecoin_qt-test_main.o: qt/test/test_main.cpp \
-./qt/forms/ui_signverifymessagedialog.h:        infoLabel_SM->setText(QApplication::translate("SignVerifyMessageDialog", "You can sign messages/agreements with your addresses to prove you can receive litecoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.", nullptr));
-./qt/forms/sendcoinsentry.ui:         <string>The fee will be deducted from the amount being sent. The recipient will receive less litecoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</string>
-./qt/forms/sendcoinsentry.ui:       <string>A message that was attached to the litecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Litecoin network.</string>
-./qt/forms/ui_modaloverlay.h:        infoText->setText(QApplication::translate("ModalOverlay", "Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the litecoin network, as detailed below.", nullptr));
-./qt/forms/ui_modaloverlay.h:        infoTextStrong->setText(QApplication::translate("ModalOverlay", "Attempting to spend litecoins that are affected by not-yet-displayed transactions will not be accepted by the network.", nullptr));
-./qt/forms/ui_sendcoinsentry.h:        checkboxSubtractFeeFromAmount->setToolTip(QApplication::translate("SendCoinsEntry", "The fee will be deducted from the amount being sent. The recipient will receive less litecoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.", nullptr));
-./qt/forms/ui_sendcoinsentry.h:        messageTextLabel->setToolTip(QApplication::translate("SendCoinsEntry", "A message that was attached to the litecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Litecoin network.", nullptr));
-./qt/forms/signverifymessagedialog.ui:          <string>You can sign messages/agreements with your addresses to prove you can receive litecoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</string>
-./qt/forms/openuridialog.ui:   <string>Open litecoin URI</string>
-./qt/forms/openuridialog.ui:        <string notr="true">litecoin:</string>
-./qt/forms/sendcoinsdialog.ui:                    <string>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for litecoin transactions than the network can process.</string>
-./qt/forms/receiverequestdialog.ui:      <string notr="true">litecoin:LTC1...</string>
-./qt/forms/modaloverlay.ui:                <string>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the litecoin network, as detailed below.</string>
-./qt/forms/modaloverlay.ui:                <string>Attempting to spend litecoins that are affected by not-yet-displayed transactions will not be accepted by the network.</string>
-./qt/forms/ui_openuridialog.h:        uriEdit->setPlaceholderText(QString::fromUtf8("litecoin:"));
-./qt/forms/ui_openuridialog.h:        OpenURIDialog->setWindowTitle(QApplication::translate("OpenURIDialog", "Open litecoin URI", nullptr));
-./qt/forms/ui_receiverequestdialog.h:        uri_content->setText(QString::fromUtf8("litecoin:LTC1..."));
-./qt/forms/ui_sendcoinsdialog.h:        labelCustomFeeWarning->setToolTip(QApplication::translate("SendCoinsDialog", "When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for litecoin transactions than the network can process.", nullptr));
+./qt/test/.deps/test_woodcoin_qt-moc_compattests.Po:qt/test/test_woodcoin_qt-moc_compattests.o: qt/test/moc_compattests.cpp \
+./qt/test/.deps/test_woodcoin_qt-rpcnestedtests.Po:qt/test/test_woodcoin_qt-rpcnestedtests.o: qt/test/rpcnestedtests.cpp \
+./qt/test/.deps/test_woodcoin_qt-apptests.Po:qt/test/test_woodcoin_qt-apptests.o: qt/test/apptests.cpp \
+./qt/test/.deps/test_woodcoin_qt-moc_uritests.Po:qt/test/test_woodcoin_qt-moc_uritests.o: qt/test/moc_uritests.cpp \
+./qt/test/.deps/test_woodcoin_qt-moc_wallettests.Po:qt/test/test_woodcoin_qt-moc_wallettests.o: qt/test/moc_wallettests.cpp \
+./qt/test/.deps/test_woodcoin_qt-moc_addressbooktests.Po:qt/test/test_woodcoin_qt-moc_addressbooktests.o: \
+./qt/test/.deps/test_woodcoin_qt-addressbooktests.Po:qt/test/test_woodcoin_qt-addressbooktests.o: qt/test/addressbooktests.cpp \
+./qt/test/.deps/test_woodcoin_qt-compattests.Po:qt/test/test_woodcoin_qt-compattests.o: qt/test/compattests.cpp \
+./qt/test/.deps/test_woodcoin_qt-moc_apptests.Po:qt/test/test_woodcoin_qt-moc_apptests.o: qt/test/moc_apptests.cpp \
+./qt/test/.deps/test_woodcoin_qt-uritests.Po:qt/test/test_woodcoin_qt-uritests.o: qt/test/uritests.cpp \
+./qt/test/.deps/test_woodcoin_qt-util.Po:qt/test/test_woodcoin_qt-util.o: qt/test/util.cpp \
+./qt/test/.deps/test_woodcoin_qt-moc_rpcnestedtests.Po:qt/test/test_woodcoin_qt-moc_rpcnestedtests.o: \
+./qt/test/.deps/test_woodcoin_qt-wallettests.Po:qt/test/test_woodcoin_qt-wallettests.o: qt/test/wallettests.cpp \
+./qt/test/.deps/test_woodcoin_qt-test_main.Po:qt/test/test_woodcoin_qt-test_main.o: qt/test/test_main.cpp \
+./qt/forms/ui_signverifymessagedialog.h:        infoLabel_SM->setText(QApplication::translate("SignVerifyMessageDialog", "You can sign messages/agreements with your addresses to prove you can receive woodcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.", nullptr));
+./qt/forms/sendcoinsentry.ui:         <string>The fee will be deducted from the amount being sent. The recipient will receive less woodcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</string>
+./qt/forms/sendcoinsentry.ui:       <string>A message that was attached to the woodcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Litecoin network.</string>
+./qt/forms/ui_modaloverlay.h:        infoText->setText(QApplication::translate("ModalOverlay", "Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the woodcoin network, as detailed below.", nullptr));
+./qt/forms/ui_modaloverlay.h:        infoTextStrong->setText(QApplication::translate("ModalOverlay", "Attempting to spend woodcoins that are affected by not-yet-displayed transactions will not be accepted by the network.", nullptr));
+./qt/forms/ui_sendcoinsentry.h:        checkboxSubtractFeeFromAmount->setToolTip(QApplication::translate("SendCoinsEntry", "The fee will be deducted from the amount being sent. The recipient will receive less woodcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.", nullptr));
+./qt/forms/ui_sendcoinsentry.h:        messageTextLabel->setToolTip(QApplication::translate("SendCoinsEntry", "A message that was attached to the woodcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Litecoin network.", nullptr));
+./qt/forms/signverifymessagedialog.ui:          <string>You can sign messages/agreements with your addresses to prove you can receive woodcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</string>
+./qt/forms/openuridialog.ui:   <string>Open woodcoin URI</string>
+./qt/forms/openuridialog.ui:        <string notr="true">woodcoin:</string>
+./qt/forms/sendcoinsdialog.ui:                    <string>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for woodcoin transactions than the network can process.</string>
+./qt/forms/receiverequestdialog.ui:      <string notr="true">woodcoin:LTC1...</string>
+./qt/forms/modaloverlay.ui:                <string>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the woodcoin network, as detailed below.</string>
+./qt/forms/modaloverlay.ui:                <string>Attempting to spend woodcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</string>
+./qt/forms/ui_openuridialog.h:        uriEdit->setPlaceholderText(QString::fromUtf8("woodcoin:"));
+./qt/forms/ui_openuridialog.h:        OpenURIDialog->setWindowTitle(QApplication::translate("OpenURIDialog", "Open woodcoin URI", nullptr));
+./qt/forms/ui_receiverequestdialog.h:        uri_content->setText(QString::fromUtf8("woodcoin:LTC1..."));
+./qt/forms/ui_sendcoinsdialog.h:        labelCustomFeeWarning->setToolTip(QApplication::translate("SendCoinsDialog", "When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for woodcoin transactions than the network can process.", nullptr));
 Binary file ./qt/libbitcoinqt_a-receiverequestdialog.o matches
 Binary file ./qt/libbitcoinqt_a-signverifymessagedialog.o matches
 Binary file ./qt/libbitcoinqt_a-modaloverlay.o matches
 Binary file ./qt/woodcoin-qt matches
-./qt/bitcoin.qrc:        <file alias="litecoin_splash">res/icons/litecoin_splash.png</file>
-./qt/.deps/litecoin_qt-main.Po:qt/litecoin_qt-main.o: qt/main.cpp /usr/include/stdc-predef.h \
+./qt/bitcoin.qrc:        <file alias="woodcoin_splash">res/icons/woodcoin_splash.png</file>
+./qt/.deps/woodcoin_qt-main.Po:qt/woodcoin_qt-main.o: qt/main.cpp /usr/include/stdc-predef.h \
 Binary file ./qt/libbitcoinqt.a matches
 Binary file ./qt/libbitcoinqt_a-sendcoinsentry.o matches
-./qt/README.md:./src/qt/litecoin-qt
-./qt/README.md:Used to process BIP21 payment URI requests. Also handles URI based application switching (e.g. when following a litecoin:... link from a browser).
-./qt/README.md:4. Enter "litecoin-qt" as project name, enter src/qt as location
-./qt/README.md:10. Start debugging with Qt Creator (you might need to the executable to "litecoin-qt" under "Run", which is where you can also add command line arguments)
-./qt/macnotificationhandler.mm:        return @"org.litecoin.Litecoin-Qt";
-./Makefile.qttest.include:bin_PROGRAMS += qt/test/test_litecoin-qt
-./Makefile.qttest.include:TESTS += qt/test/test_litecoin-qt
-./Makefile.qttest.include:qt_test_test_litecoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
-./Makefile.qttest.include:qt_test_test_litecoin_qt_SOURCES = \
-./Makefile.qttest.include:qt_test_test_litecoin_qt_SOURCES += \
-./Makefile.qttest.include:nodist_qt_test_test_litecoin_qt_SOURCES = $(TEST_QT_MOC_CPP)
-./Makefile.qttest.include:qt_test_test_litecoin_qt_LDADD = $(LIBBITCOINQT) $(LIBBITCOIN_SERVER) $(LIBTEST_UTIL)
-./Makefile.qttest.include:qt_test_test_litecoin_qt_LDADD += $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET)
-./Makefile.qttest.include:qt_test_test_litecoin_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
-./Makefile.qttest.include:qt_test_test_litecoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) \
-./Makefile.qttest.include:qt_test_test_litecoin_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
-./Makefile.qttest.include:qt_test_test_litecoin_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
-./Makefile.qttest.include:test_litecoin_qt : qt/test/test_litecoin-qt$(EXEEXT)
-./Makefile.qttest.include:test_litecoin_qt_check : qt/test/test_litecoin-qt$(EXEEXT) FORCE
-./Makefile.qttest.include:test_litecoin_qt_clean: FORCE
-./Makefile.qttest.include:	rm -f $(CLEAN_litecoin_QT_TEST) $(qt_test_test_litecoin_qt_OBJECTS)
-./bitcoin-cli-res.rc:            VALUE "FileDescription",    "litecoin-cli (JSON-RPC client for " PACKAGE_NAME ")"
-./bitcoin-cli-res.rc:            VALUE "InternalName",       "litecoin-cli"
-./bitcoin-cli-res.rc:            VALUE "OriginalFilename",   "litecoin-cli.exe"
-./bitcoin-cli-res.rc:            VALUE "ProductName",        "litecoin-cli"
-./Makefile.qt.include:bin_PROGRAMS += qt/litecoin-qt
-./Makefile.qt.include:  bin_PROGRAMS += litecoin-gui
-./Makefile.qt.include:  qt/res/icons/litecoin_splash.png \
-./Makefile.qt.include:litecoin_qt_cppflags = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
-./Makefile.qt.include:litecoin_qt_cxxflags = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
-./Makefile.qt.include:litecoin_qt_sources = qt/main.cpp
-./Makefile.qt.include:  litecoin_qt_sources += $(BITCOIN_RC)
-./Makefile.qt.include:litecoin_qt_ldadd = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
-./Makefile.qt.include:litecoin_qt_ldadd += $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET)
-./Makefile.qt.include:litecoin_qt_ldadd += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
-./Makefile.qt.include:litecoin_qt_ldadd += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
-./Makefile.qt.include:litecoin_qt_ldflags = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
-./Makefile.qt.include:litecoin_qt_libtoolflags = $(AM_LIBTOOLFLAGS) --tag CXX
-./Makefile.qt.include:qt_litecoin_qt_CPPFLAGS = $(litecoin_qt_cppflags)
-./Makefile.qt.include:qt_litecoin_qt_CXXFLAGS = $(litecoin_qt_cxxflags)
-./Makefile.qt.include:qt_litecoin_qt_SOURCES = $(litecoin_qt_sources)
-./Makefile.qt.include:qt_litecoin_qt_LDADD = $(litecoin_qt_ldadd)
-./Makefile.qt.include:qt_litecoin_qt_LDFLAGS = $(litecoin_qt_ldflags)
-./Makefile.qt.include:qt_litecoin_qt_LIBTOOLFLAGS = $(litecoin_qt_libtoolflags)
-./Makefile.qt.include:litecoin_gui_CPPFLAGS = $(litecoin_qt_cppflags)
-./Makefile.qt.include:litecoin_gui_CXXFLAGS = $(litecoin_qt_cxxflags)
-./Makefile.qt.include:litecoin_gui_SOURCES = $(litecoin_qt_sources)
-./Makefile.qt.include:litecoin_gui_LDADD = $(litecoin_qt_ldadd)
-./Makefile.qt.include:litecoin_gui_LDFLAGS = $(litecoin_qt_ldflags)
-./Makefile.qt.include:litecoin_gui_LIBTOOLFLAGS = $(litecoin_qt_libtoolflags)
-./Makefile.qt.include:	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_litecoin_qt_OBJECTS) qt/litecoin-qt$(EXEEXT) $(LIBBITCOINQT)
-./Makefile.qt.include:bitcoin_qt : qt/litecoin-qt$(EXEEXT)
-./bitcoind-res.rc:            VALUE "FileDescription",    "litecoind (Litecoin node with a JSON-RPC server)"
-./bitcoind-res.rc:            VALUE "InternalName",       "litecoind"
-./bitcoind-res.rc:            VALUE "OriginalFilename",   "litecoind.exe"
-./bitcoind-res.rc:            VALUE "ProductName",        "litecoind"
-./bench/.gitignore:bench_litecoin
-./bench/.deps/bench_litecoin-poly1305.Po:bench/bench_litecoin-poly1305.o: bench/poly1305.cpp \
-./bench/.deps/bench_litecoin-examples.Po:bench/bench_litecoin-examples.o: bench/examples.cpp \
-./bench/.deps/bench_litecoin-duplicate_inputs.Po:bench/bench_litecoin-duplicate_inputs.o: bench/duplicate_inputs.cpp \
-./bench/.deps/bench_litecoin-verify_script.Po:bench/bench_litecoin-verify_script.o: bench/verify_script.cpp \
-./bench/.deps/bench_litecoin-checkblock.Po:bench/bench_litecoin-checkblock.o: bench/checkblock.cpp \
-./bench/.deps/bench_litecoin-bench.Po:bench/bench_litecoin-bench.o: bench/bench.cpp /usr/include/stdc-predef.h \
-./bench/.deps/bench_litecoin-crypto_hash.Po:bench/bench_litecoin-crypto_hash.o: bench/crypto_hash.cpp \
-./bench/.deps/bench_litecoin-coin_selection.Po:bench/bench_litecoin-coin_selection.o: bench/coin_selection.cpp \
-./bench/.deps/bench_litecoin-gcs_filter.Po:bench/bench_litecoin-gcs_filter.o: bench/gcs_filter.cpp \
-./bench/.deps/bench_litecoin-bech32.Po:bench/bench_litecoin-bech32.o: bench/bech32.cpp \
-./bench/.deps/bench_litecoin-mempool_eviction.Po:bench/bench_litecoin-mempool_eviction.o: bench/mempool_eviction.cpp \
-./bench/.deps/bench_litecoin-chacha_poly_aead.Po:bench/bench_litecoin-chacha_poly_aead.o: bench/chacha_poly_aead.cpp \
-./bench/.deps/bench_litecoin-wallet_balance.Po:bench/bench_litecoin-wallet_balance.o: bench/wallet_balance.cpp \
-./bench/.deps/bench_litecoin-prevector.Po:bench/bench_litecoin-prevector.o: bench/prevector.cpp \
-./bench/.deps/bench_litecoin-mempool_stress.Po:bench/bench_litecoin-mempool_stress.o: bench/mempool_stress.cpp \
-./bench/.deps/bench_litecoin-ccoins_caching.Po:bench/bench_litecoin-ccoins_caching.o: bench/ccoins_caching.cpp \
-./bench/.deps/bench_litecoin-util_time.Po:bench/bench_litecoin-util_time.o: bench/util_time.cpp \
-./bench/.deps/bench_litecoin-base58.Po:bench/bench_litecoin-base58.o: bench/base58.cpp \
-./bench/.deps/bench_litecoin-rpc_mempool.Po:bench/bench_litecoin-rpc_mempool.o: bench/rpc_mempool.cpp \
-./bench/.deps/bench_litecoin-rollingbloom.Po:bench/bench_litecoin-rollingbloom.o: bench/rollingbloom.cpp \
-./bench/.deps/bench_litecoin-bench_bitcoin.Po:bench/bench_litecoin-bench_bitcoin.o: bench/bench_bitcoin.cpp \
-./bench/.deps/bench_litecoin-block_assemble.Po:bench/bench_litecoin-block_assemble.o: bench/block_assemble.cpp \
-./bench/.deps/bench_litecoin-data.Po:bench/bench_litecoin-data.o: bench/data.cpp /usr/include/stdc-predef.h \
-./bench/.deps/bench_litecoin-lockedpool.Po:bench/bench_litecoin-lockedpool.o: bench/lockedpool.cpp \
-./bench/.deps/bench_litecoin-nanobench.Po:bench/bench_litecoin-nanobench.o: bench/nanobench.cpp \
-./bench/.deps/bench_litecoin-rpc_blockchain.Po:bench/bench_litecoin-rpc_blockchain.o: bench/rpc_blockchain.cpp \
-./bench/.deps/bench_litecoin-merkle_root.Po:bench/bench_litecoin-merkle_root.o: bench/merkle_root.cpp \
-./bench/.deps/bench_litecoin-chacha20.Po:bench/bench_litecoin-chacha20.o: bench/chacha20.cpp \
-./bench/.deps/bench_litecoin-checkqueue.Po:bench/bench_litecoin-checkqueue.o: bench/checkqueue.cpp \
-./bench/.deps/bench_litecoin-addrman.Po:bench/bench_litecoin-addrman.o: bench/addrman.cpp \
-./bench/.deps/bench_litecoin-hashpadding.Po:bench/bench_litecoin-hashpadding.o: bench/hashpadding.cpp \
-Binary file ./bench/bench_litecoin matches
-./temp.txt:./bitcoin-tx-res.rc:            VALUE "FileDescription",    "litecoin-tx (CLI Litecoin transaction editor utility)"
-./temp.txt:Binary file ./test/test_litecoin matches
-./temp.txt:Binary file ./qt/test/test_litecoin-qt matches
-./temp.txt:./qt/forms/sendcoinsentry.ui:       <string>A message that was attached to the litecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Litecoin network.</string>
-./temp.txt:./qt/forms/ui_sendcoinsentry.h:        messageTextLabel->setToolTip(QApplication::translate("SendCoinsEntry", "A message that was attached to the litecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Litecoin network.", nullptr));
-./temp.txt:./qt/macnotificationhandler.mm:        return @"org.litecoin.Litecoin-Qt";
-./temp.txt:./bitcoind-res.rc:            VALUE "FileDescription",    "litecoind (Litecoin node with a JSON-RPC server)"
-./temp.txt:Binary file ./bench/bench_litecoin matches
+./qt/README.md:./src/qt/woodcoin-qt
+./qt/README.md:Used to process BIP21 payment URI requests. Also handles URI based application switching (e.g. when following a woodcoin:... link from a browser).
+./qt/README.md:4. Enter "woodcoin-qt" as project name, enter src/qt as location
+./qt/README.md:10. Start debugging with Qt Creator (you might need to the executable to "woodcoin-qt" under "Run", which is where you can also add command line arguments)
+./qt/macnotificationhandler.mm:        return @"org.woodcoin.Litecoin-Qt";
+./Makefile.qttest.include:bin_PROGRAMS += qt/test/test_woodcoin-qt
+./Makefile.qttest.include:TESTS += qt/test/test_woodcoin-qt
+./Makefile.qttest.include:qt_test_test_woodcoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+./Makefile.qttest.include:qt_test_test_woodcoin_qt_SOURCES = \
+./Makefile.qttest.include:qt_test_test_woodcoin_qt_SOURCES += \
+./Makefile.qttest.include:nodist_qt_test_test_woodcoin_qt_SOURCES = $(TEST_QT_MOC_CPP)
+./Makefile.qttest.include:qt_test_test_woodcoin_qt_LDADD = $(LIBBITCOINQT) $(LIBBITCOIN_SERVER) $(LIBTEST_UTIL)
+./Makefile.qttest.include:qt_test_test_woodcoin_qt_LDADD += $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET)
+./Makefile.qttest.include:qt_test_test_woodcoin_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+./Makefile.qttest.include:qt_test_test_woodcoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) \
+./Makefile.qttest.include:qt_test_test_woodcoin_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+./Makefile.qttest.include:qt_test_test_woodcoin_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+./Makefile.qttest.include:test_woodcoin_qt : qt/test/test_woodcoin-qt$(EXEEXT)
+./Makefile.qttest.include:test_woodcoin_qt_check : qt/test/test_woodcoin-qt$(EXEEXT) FORCE
+./Makefile.qttest.include:test_woodcoin_qt_clean: FORCE
+./Makefile.qttest.include:	rm -f $(CLEAN_woodcoin_QT_TEST) $(qt_test_test_woodcoin_qt_OBJECTS)
+./bitcoin-cli-res.rc:            VALUE "FileDescription",    "woodcoin-cli (JSON-RPC client for " PACKAGE_NAME ")"
+./bitcoin-cli-res.rc:            VALUE "InternalName",       "woodcoin-cli"
+./bitcoin-cli-res.rc:            VALUE "OriginalFilename",   "woodcoin-cli.exe"
+./bitcoin-cli-res.rc:            VALUE "ProductName",        "woodcoin-cli"
+./Makefile.qt.include:bin_PROGRAMS += qt/woodcoin-qt
+./Makefile.qt.include:  bin_PROGRAMS += woodcoin-gui
+./Makefile.qt.include:  qt/res/icons/woodcoin_splash.png \
+./Makefile.qt.include:woodcoin_qt_cppflags = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+./Makefile.qt.include:woodcoin_qt_cxxflags = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+./Makefile.qt.include:woodcoin_qt_sources = qt/main.cpp
+./Makefile.qt.include:  woodcoin_qt_sources += $(BITCOIN_RC)
+./Makefile.qt.include:woodcoin_qt_ldadd = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
+./Makefile.qt.include:woodcoin_qt_ldadd += $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET)
+./Makefile.qt.include:woodcoin_qt_ldadd += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+./Makefile.qt.include:woodcoin_qt_ldadd += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
+./Makefile.qt.include:woodcoin_qt_ldflags = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+./Makefile.qt.include:woodcoin_qt_libtoolflags = $(AM_LIBTOOLFLAGS) --tag CXX
+./Makefile.qt.include:qt_woodcoin_qt_CPPFLAGS = $(woodcoin_qt_cppflags)
+./Makefile.qt.include:qt_woodcoin_qt_CXXFLAGS = $(woodcoin_qt_cxxflags)
+./Makefile.qt.include:qt_woodcoin_qt_SOURCES = $(woodcoin_qt_sources)
+./Makefile.qt.include:qt_woodcoin_qt_LDADD = $(woodcoin_qt_ldadd)
+./Makefile.qt.include:qt_woodcoin_qt_LDFLAGS = $(woodcoin_qt_ldflags)
+./Makefile.qt.include:qt_woodcoin_qt_LIBTOOLFLAGS = $(woodcoin_qt_libtoolflags)
+./Makefile.qt.include:woodcoin_gui_CPPFLAGS = $(woodcoin_qt_cppflags)
+./Makefile.qt.include:woodcoin_gui_CXXFLAGS = $(woodcoin_qt_cxxflags)
+./Makefile.qt.include:woodcoin_gui_SOURCES = $(woodcoin_qt_sources)
+./Makefile.qt.include:woodcoin_gui_LDADD = $(woodcoin_qt_ldadd)
+./Makefile.qt.include:woodcoin_gui_LDFLAGS = $(woodcoin_qt_ldflags)
+./Makefile.qt.include:woodcoin_gui_LIBTOOLFLAGS = $(woodcoin_qt_libtoolflags)
+./Makefile.qt.include:	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_woodcoin_qt_OBJECTS) qt/woodcoin-qt$(EXEEXT) $(LIBBITCOINQT)
+./Makefile.qt.include:bitcoin_qt : qt/woodcoin-qt$(EXEEXT)
+./bitcoind-res.rc:            VALUE "FileDescription",    "woodcoind (Litecoin node with a JSON-RPC server)"
+./bitcoind-res.rc:            VALUE "InternalName",       "woodcoind"
+./bitcoind-res.rc:            VALUE "OriginalFilename",   "woodcoind.exe"
+./bitcoind-res.rc:            VALUE "ProductName",        "woodcoind"
+./bench/.gitignore:bench_woodcoin
+./bench/.deps/bench_woodcoin-poly1305.Po:bench/bench_woodcoin-poly1305.o: bench/poly1305.cpp \
+./bench/.deps/bench_woodcoin-examples.Po:bench/bench_woodcoin-examples.o: bench/examples.cpp \
+./bench/.deps/bench_woodcoin-duplicate_inputs.Po:bench/bench_woodcoin-duplicate_inputs.o: bench/duplicate_inputs.cpp \
+./bench/.deps/bench_woodcoin-verify_script.Po:bench/bench_woodcoin-verify_script.o: bench/verify_script.cpp \
+./bench/.deps/bench_woodcoin-checkblock.Po:bench/bench_woodcoin-checkblock.o: bench/checkblock.cpp \
+./bench/.deps/bench_woodcoin-bench.Po:bench/bench_woodcoin-bench.o: bench/bench.cpp /usr/include/stdc-predef.h \
+./bench/.deps/bench_woodcoin-crypto_hash.Po:bench/bench_woodcoin-crypto_hash.o: bench/crypto_hash.cpp \
+./bench/.deps/bench_woodcoin-coin_selection.Po:bench/bench_woodcoin-coin_selection.o: bench/coin_selection.cpp \
+./bench/.deps/bench_woodcoin-gcs_filter.Po:bench/bench_woodcoin-gcs_filter.o: bench/gcs_filter.cpp \
+./bench/.deps/bench_woodcoin-bech32.Po:bench/bench_woodcoin-bech32.o: bench/bech32.cpp \
+./bench/.deps/bench_woodcoin-mempool_eviction.Po:bench/bench_woodcoin-mempool_eviction.o: bench/mempool_eviction.cpp \
+./bench/.deps/bench_woodcoin-chacha_poly_aead.Po:bench/bench_woodcoin-chacha_poly_aead.o: bench/chacha_poly_aead.cpp \
+./bench/.deps/bench_woodcoin-wallet_balance.Po:bench/bench_woodcoin-wallet_balance.o: bench/wallet_balance.cpp \
+./bench/.deps/bench_woodcoin-prevector.Po:bench/bench_woodcoin-prevector.o: bench/prevector.cpp \
+./bench/.deps/bench_woodcoin-mempool_stress.Po:bench/bench_woodcoin-mempool_stress.o: bench/mempool_stress.cpp \
+./bench/.deps/bench_woodcoin-ccoins_caching.Po:bench/bench_woodcoin-ccoins_caching.o: bench/ccoins_caching.cpp \
+./bench/.deps/bench_woodcoin-util_time.Po:bench/bench_woodcoin-util_time.o: bench/util_time.cpp \
+./bench/.deps/bench_woodcoin-base58.Po:bench/bench_woodcoin-base58.o: bench/base58.cpp \
+./bench/.deps/bench_woodcoin-rpc_mempool.Po:bench/bench_woodcoin-rpc_mempool.o: bench/rpc_mempool.cpp \
+./bench/.deps/bench_woodcoin-rollingbloom.Po:bench/bench_woodcoin-rollingbloom.o: bench/rollingbloom.cpp \
+./bench/.deps/bench_woodcoin-bench_bitcoin.Po:bench/bench_woodcoin-bench_bitcoin.o: bench/bench_bitcoin.cpp \
+./bench/.deps/bench_woodcoin-block_assemble.Po:bench/bench_woodcoin-block_assemble.o: bench/block_assemble.cpp \
+./bench/.deps/bench_woodcoin-data.Po:bench/bench_woodcoin-data.o: bench/data.cpp /usr/include/stdc-predef.h \
+./bench/.deps/bench_woodcoin-lockedpool.Po:bench/bench_woodcoin-lockedpool.o: bench/lockedpool.cpp \
+./bench/.deps/bench_woodcoin-nanobench.Po:bench/bench_woodcoin-nanobench.o: bench/nanobench.cpp \
+./bench/.deps/bench_woodcoin-rpc_blockchain.Po:bench/bench_woodcoin-rpc_blockchain.o: bench/rpc_blockchain.cpp \
+./bench/.deps/bench_woodcoin-merkle_root.Po:bench/bench_woodcoin-merkle_root.o: bench/merkle_root.cpp \
+./bench/.deps/bench_woodcoin-chacha20.Po:bench/bench_woodcoin-chacha20.o: bench/chacha20.cpp \
+./bench/.deps/bench_woodcoin-checkqueue.Po:bench/bench_woodcoin-checkqueue.o: bench/checkqueue.cpp \
+./bench/.deps/bench_woodcoin-addrman.Po:bench/bench_woodcoin-addrman.o: bench/addrman.cpp \
+./bench/.deps/bench_woodcoin-hashpadding.Po:bench/bench_woodcoin-hashpadding.o: bench/hashpadding.cpp \
+Binary file ./bench/bench_woodcoin matches
+./temp.txt:./bitcoin-tx-res.rc:            VALUE "FileDescription",    "woodcoin-tx (CLI Litecoin transaction editor utility)"
+./temp.txt:Binary file ./test/test_woodcoin matches
+./temp.txt:Binary file ./qt/test/test_woodcoin-qt matches
+./temp.txt:./qt/forms/sendcoinsentry.ui:       <string>A message that was attached to the woodcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Litecoin network.</string>
+./temp.txt:./qt/forms/ui_sendcoinsentry.h:        messageTextLabel->setToolTip(QApplication::translate("SendCoinsEntry", "A message that was attached to the woodcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Litecoin network.", nullptr));
+./temp.txt:./qt/macnotificationhandler.mm:        return @"org.woodcoin.Litecoin-Qt";
+./temp.txt:./bitcoind-res.rc:            VALUE "FileDescription",    "woodcoind (Litecoin node with a JSON-RPC server)"
+./temp.txt:Binary file ./bench/bench_woodcoin matches

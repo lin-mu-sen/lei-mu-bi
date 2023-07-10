@@ -5,7 +5,7 @@ Setup
 ---------------------
 Litecoin Core is the original Litecoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Litecoin transactions, which requires approximately 22 gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Litecoin Core, visit [litecoin.org](https://litecoin.org/).
+To download Litecoin Core, visit [woodcoin.org](https://woodcoin.org/).
 
 Running
 ---------------------
@@ -15,12 +15,12 @@ The following are some helpful notes on how to run Litecoin Core on your native 
 
 Unpack the files into a directory and run:
 
-- `bin/litecoin-qt` (GUI) or
-- `bin/litecoind` (headless)
+- `bin/woodcoin-qt` (GUI) or
+- `bin/woodcoind` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run litecoin-qt.exe.
+Unpack the files into a directory, and then run woodcoin-qt.exe.
 
 ### macOS
 
@@ -28,9 +28,9 @@ Drag Litecoin Core to your applications folder, and then run Litecoin Core.
 
 ### Need Help?
 
-* See the documentation at the [Litecoin Wiki](https://litecoin.info/) for help and more information.
-* Ask for help on [#litecoin](https://webchat.freenode.net/#litecoin) on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#litecoin).
-* Ask for help on the [LitecoinTalk](https://litecointalk.io/) forums, in the [Technical Support board](https://litecointalk.io/c/technical-support).
+* See the documentation at the [Litecoin Wiki](https://woodcoin.info/) for help and more information.
+* Ask for help on [#woodcoin](https://webchat.freenode.net/#woodcoin) on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#woodcoin).
+* Ask for help on the [LitecoinTalk](https://woodcointalk.io/) forums, in the [Technical Support board](https://woodcointalk.io/c/technical-support).
 
 Building
 ---------------------
@@ -64,8 +64,8 @@ The Litecoin repo's [root README](/README.md) contains relevant information on t
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [LitecoinTalk](https://litecointalk.io/) forums.
-* Discuss general Litecoin development on #litecoin-dev on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#litecoin-dev).
+* Discuss on the [LitecoinTalk](https://woodcointalk.io/) forums.
+* Discuss general Litecoin development on #woodcoin-dev on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#woodcoin-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
